@@ -1075,6 +1075,14 @@ section.dark{
 section.dark .project-detail .title, section.dark .project-detail .subtitle, section.dark .project-detail p, section.dark .next-link .nav-title, section.dark .next-link .next-title {
     color: #fff;
 }
+section.dark.galaxy-bg{
+    background: #15161B;
+}
+
+
+section.dark.galaxy-bg .project-detail .title, section.dark.galaxy-bg .project-detail .subtitle, section.dark.galaxy-bg .project-detail p, section.dark.galaxy-bg .next-link .nav-title, section.dark.galaxy-bg .next-link .next-title {
+    color: #fff;
+}
 
 .project-detail .title{
     font-size: 40px;
@@ -1652,10 +1660,9 @@ font-size: 30px;
     top: -6px;
     left: -3px;
     font-size: 4vw; 
-    letter-spacing: -20px
+    letter-spacing: -20px;
     text-rendering: optimizeLegibility;
     color:black;
-}
 }
 
 .responsive {
@@ -1664,7 +1671,7 @@ max-width: 800px;
   height: auto;
 }
     
-}
+
 
 .col-centered {
     display:inline-block; float:none; margin-right:-4px;
@@ -1770,6 +1777,11 @@ max-width: 800px;
 .purple {
 
     background-color: #484266;
+}
+
+.galaxy-bg{
+
+    background-color: #15161B;
 }
 
 .round-corners {
