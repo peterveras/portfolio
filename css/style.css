@@ -33,14 +33,14 @@ body{
 }
 
 p{
-  font-size: 18px;
-  line-height: 35px;
+  font-size: 17px;
+  line-height: 32px;
 }
 
 .fadeffect{
     width: 100%;
     height: 100%;
-    background: #000;
+    background: #161616;
     position: fixed;
     z-index: 10000;
     top: 0;
@@ -58,7 +58,7 @@ p{
 }
 
 .dark-bg p{
-  color: #fff;
+  color: #F2F2F2;
 }
 
 
@@ -72,7 +72,7 @@ p{
     text-align: center;
     display: table;
     height: 100%;
-    background: #000;
+    background: #161616;
 }
 
 #preloader svg{
@@ -96,7 +96,7 @@ section{
 
 
 .midnightHeader.dark .menu .nav-icon span{
-    background: #fff;
+    background: #F2F2F2;
 }
 
 .midnightHeader.dark .logo{
@@ -128,7 +128,7 @@ section{
 }
 
 .dark-bg{
-    background: center center no-repeat rgb(0, 0, 0);
+    background: center center no-repeat rgb(22, 22, 22);
     background-size: 60%;
 }
 .pink-bg{
@@ -203,7 +203,7 @@ section{
 }
 
 .uptotop .midnightHeader.dark span {
-    color: #fff;
+    color: #F2F2F2;
 }
 
 .uptotop .holder{
@@ -223,7 +223,7 @@ section{
     position: absolute;
     height: 4px;
     width: 100%;
-    background: #000;
+    background: #161616;
     opacity: 1;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -422,7 +422,7 @@ section{
 
 .site-btn{
     background: none;
-    border: solid 2px #000;
+    border: solid 2px #161616;
     padding: 10px 41px;
     outline: 0;
     border-radius: 50px;
@@ -435,25 +435,25 @@ section{
 
 .site-btn:focus{
     outline: none;
-    border: solid 2px #000;
+    border: solid 2px #161616;
 }
 
 .site-btn:hover{
-    background: #000;
-    color: #fff;
+    background: #161616;
+    color: #F2F2F2;
     transition: all ease 0.3s;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
 }
 
 .dark-bg .site-btn{
-    border: solid 2px #fff;
-    color: #fff;
+    border: solid 2px #F2F2F2;
+    color: #F2F2F2;
 }
 
 .dark-bg .site-btn:hover{
-    background: #fff;
-    color: #000;
+    background: #F2F2F2;
+    color: #161616;
     transition: all ease 0.3s;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
@@ -470,7 +470,7 @@ section{
     margin: 0;
     display: none;
     overflow: hidden;
-    background: #000;
+    background: #161616;
     opacity: 0;    
     width: 100%;
     height: 100%;
@@ -503,7 +503,7 @@ section{
     font-size: 36px;
     line-height: 56px;
     font-weight: 600;
-    color: #fff;
+    color: #F2F2F2;
     transition: all 500ms ease;
     letter-spacing: 1px;
     width: 100%;
@@ -547,15 +547,15 @@ section{
 }
 
 .home.bgimage .icon-circle{
-    border: 2px solid #fff;
+    border: 2px solid #F2F2F2;
 }
 
 .home.bgimage .down-icon .icon i {
-    color: #fff;
+    color: #F2F2F2;
 }
 
 .home.bgimage .down-icon:hover > .icon-circle {
-    border: 2px solid #fff;
+    border: 2px solid #F2F2F2;
 }
 
 .outter {
@@ -581,7 +581,7 @@ section{
 }
 
 .home.dark-bg .text{
-    color: #fff;
+    color: #F2F2F2;
 }
 
 @keyframes scroll {
@@ -619,7 +619,7 @@ svg #wheel {
     height: 50px;
     border-radius: 32px;
     box-sizing: border-box;
-    border: 2px solid #000;
+    border: 2px solid #161616;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -639,7 +639,7 @@ svg #wheel {
 }
 
 .down-icon.white .icon-circle{
-    border: 2px solid #fff;
+    border: 2px solid #F2F2F2;
 }
 
 .down-icon.white:hover > .icon-circle{
@@ -647,15 +647,15 @@ svg #wheel {
 }
 
 .down-icon.white .icon i{
-    color: #fff;
+    color: #F2F2F2;
 }
 
 .down-icon:hover > .icon-circle{
-    border: 2px solid #000;
+    border: 2px solid #161616;
 }
 
 .down-icon .icon i {
-    color: #000;
+    color: #161616;
 }
 
 .section-title{
@@ -669,7 +669,7 @@ svg #wheel {
     content: '';
     width: 45px;
     height: 2px;
-    background: #fff;
+    background: #F2F2F2;
     position: absolute;
     left: 0;
     right: 0;
@@ -678,11 +678,11 @@ svg #wheel {
 }
 
 .dark-bg .section-title{
-    color: #fff;
+    color: #F2F2F2;
 }
 
 .white-bg .section-title:after{
-    background: #000;
+    background: #161616;
 }
 
 .motto .text{
@@ -693,17 +693,17 @@ svg #wheel {
 }
 
 .dark-bg .motto .text{
-  color: #fff;
+  color: #F2F2F2;
 }
 
 .motto span{
     font-size: 13px;
-    color: #ffff;
+    color: #F2F2F2f;
     opacity: .6;
 }
 
 .white-bg .motto span{
-    color: #000;
+    color: #161616;
 }
 
 .subtitle{
@@ -712,7 +712,7 @@ svg #wheel {
 }
 
 .dark-bg .subtitle{
-    color: #fff;
+    color: #F2F2F2;
 }
 
 .wwd .feature .title{
@@ -733,7 +733,7 @@ svg #wheel {
 }
 
 .dark-bg .wwd .feature {
-    color: #fff;
+    color: #F2F2F2;
 }
 
 
@@ -848,7 +848,7 @@ svg #wheel {
 }
 
 .portfolio_filter ul li a{
-    color: #fff;
+    color: #F2F2F2;
     font-size: 30px;
     font-weight: 600;
     cursor: pointer;    
@@ -930,7 +930,7 @@ svg #wheel {
 }
 
 .portfolio-item figcaption{
-    color: #fff;
+    color: #F2F2F2;
 }
 
 .portfolio-item:hover{
@@ -984,7 +984,7 @@ svg #wheel {
 }
 
 .hero.load{
-    background: #000;
+    background: #161616;
 }
 
 .hero.load .hero-image{
@@ -1057,23 +1057,23 @@ header.load{
 }
 
 .hero-content .title{
-    color: #fff;
+    color: #F2F2F2;
     font-size: 60px;
     font-weight: 700;
 }
 
 .hero-content .category{
-    color: #fff;
+    color: #F2F2F2;
     font-weight: 500;
 }
 
 section.dark{
-    background: #000;
+    background: #161616;
 }
 
 
 section.dark .project-detail .title, section.dark .project-detail .subtitle, section.dark .project-detail p, section.dark .next-link .nav-title, section.dark .next-link .next-title {
-    color: #fff;
+    color: #F2F2F2;
 }
 section.dark.galaxy-bg{
     background: #15161B;
@@ -1081,7 +1081,7 @@ section.dark.galaxy-bg{
 
 
 section.dark.galaxy-bg .project-detail .title, section.dark.galaxy-bg .project-detail .subtitle, section.dark.galaxy-bg .project-detail p, section.dark.galaxy-bg .next-link .nav-title, section.dark.galaxy-bg .next-link .next-title {
-    color: #fff;
+    color: #F2F2F2;
 }
 
 .project-detail .title{
@@ -1111,13 +1111,13 @@ section.dark.galaxy-bg .project-detail .title, section.dark.galaxy-bg .project-d
 }
 
 .next-link .nav-title {
-    color: #000;
+    color: #161616;
     font-size: 33px;
     font-weight: 600;
 }
 
 .next-link .next-title {
-    color: #000;
+    color: #161616;
     font-size: 30px;
     font-weight: 600;
 }
@@ -1238,19 +1238,19 @@ section.dark.galaxy-bg .project-detail .title, section.dark.galaxy-bg .project-d
 }
 
 .testimonials .item span{
-    color: #fff;
+    color: #F2F2F2;
     margin-top:30px;
 }
 
 .testimonials .owl-nav i{
-    color: #fff;
+    color: #F2F2F2;
     outline: 0;
     padding: 15px 30px;
     margin-top: 20px;
 }
 
 .white-bg .testimonials .owl-nav i, .white-bg .testimonials .item span{
-    color: #000;
+    color: #161616;
 }
 
 .testimonials .owl-nav button:focus{
@@ -1272,7 +1272,7 @@ section.dark.galaxy-bg .project-detail .title, section.dark.galaxy-bg .project-d
 }
 
 .social a{
-    color: #000;
+    color: #161616;
     font-size: 13px;
     font-weight: 600;
     margin-right: 7px;
@@ -1288,8 +1288,8 @@ section.dark.galaxy-bg .project-detail .title, section.dark.galaxy-bg .project-d
     width: 100%;
     height: 45px;
     border: 0;
-    color: #fff;
-    border-bottom: solid 1px #000;
+    color: #F2F2F2;
+    border-bottom: solid 1px #161616;
     font-size: 13px;
     padding-left: 10px;
     margin-bottom: 30px;
@@ -1299,8 +1299,8 @@ section.dark.galaxy-bg .project-detail .title, section.dark.galaxy-bg .project-d
 .contact-form textarea {
     width: 100%;
     border: 0;
-    color: #000;
-    border-bottom: solid 1px #000;
+    color: #161616;
+    border-bottom: solid 1px #161616;
     font-size: 13px;
     padding: 20px 0 0 10px;
     height: 160px;
@@ -1312,19 +1312,19 @@ section.dark.galaxy-bg .project-detail .title, section.dark.galaxy-bg .project-d
 }
 
 .form-inp:focus {
-    border-bottom: solid 1px #000 !important;
+    border-bottom: solid 1px #161616 !important;
     transition: all ease 0.5s;
     -webkit-transition: all ease 0.5s;
     -moz-transition: all ease 0.5s;
 }
 
 .form-inp::placeholder, textarea::placeholder{
-    color: #000;
+    color: #161616;
   font-family: 'Poppins', sans-serif;
 }
 
 .contact-form textarea:focus {
-    border-bottom: solid 1px #000 !important;
+    border-bottom: solid 1px #161616 !important;
     transition: all ease 0.5s;
     -webkit-transition: all ease 0.5s;
     -moz-transition: all ease 0.5s;
@@ -1334,7 +1334,7 @@ section.dark.galaxy-bg .project-detail .title, section.dark.galaxy-bg .project-d
     font-size: 21px;
     line-height: 38px;
     font-weight: 500;
-    color: #000;
+    color: #161616;
     text-align: center;
 }
 
@@ -1344,22 +1344,22 @@ section.dark.galaxy-bg .project-detail .title, section.dark.galaxy-bg .project-d
 
 
 .dark-bg .form-inp, .dark-bg .contact-form textarea {
-    border-bottom: solid 1px #fff;
+    border-bottom: solid 1px #F2F2F2;
 }
 
 .dark-bg .form-inp:focus {
-    border-bottom: solid 1px #fff !important;
+    border-bottom: solid 1px #F2F2F2 !important;
 }
 
 .dark-bg .form-inp::placeholder, textarea::placeholder{
-    color: #fff;
+    color: #F2F2F2;
 }
 
 /*------------------------ Footer ------------------------*/  
 
 footer{
     background: #171717;
-    color: #fff;
+    color: #F2F2F2;
     padding: 60px;
 }
 
@@ -1370,7 +1370,7 @@ footer .social{
 }
 
 footer .social a{
-    color: #fff;
+    color: #F2F2F2;
     margin-right: 45px;
     font-size: 15px;
 }
@@ -1382,12 +1382,12 @@ footer p{
 
 
 footer a{
-    color: #fff;
+    color: #F2F2F2;
     opacity: 1;
 }
 
 footer a:hover{
-    color: #fff;
+    color: #F2F2F2;
     opacity: .5;
     transition: all ease 0.3s;
 }
@@ -1532,7 +1532,7 @@ footer .social-icons{
 
 
 .filter-icon {
-    background: #fff;
+    background: #F2F2F2;
     padding: 7px;
     height: 33px;    
     bottom: 20px;
@@ -1764,11 +1764,11 @@ max-width: 800px;
      background-color: #404040;
 }
 .white-bg {
-    background-color: #ffffff;
+    background-color: white;
 }
 
 .lightgrey-bg {
-    background-color: #EFEFEF;
+    background-color: #EBEBEB;
 }
 
 .yellow {
