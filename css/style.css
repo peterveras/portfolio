@@ -698,7 +698,7 @@ svg #wheel {
 
 .motto span{
     font-size: 13px;
-    color: #F2F2F2f;
+    color: #F2F2F2;
     opacity: .6;
 }
 
@@ -1706,7 +1706,7 @@ max-width: 800px;
 
 
 .white-text {
-    color: white;
+    color: #F2F2F2;
 }
 
 .no-gutter {
@@ -1784,6 +1784,21 @@ max-width: 800px;
     background-color: #15161B;
 }
 
+.galaxy-bg-purple{
+
+    background-color: #7000FF;
+}
+
 .round-corners {
      border-radius: 10px;
+}
+
+.mutiply-blend-mode{
+
+    mix-blend-mode: multiply;
+}
+
+.galaxy-bg-purple-gradient{
+
+    background: linear-gradient(180deg, rgba(112,0,255,1) 0%, rgba(21,22,27,1) 100%);
 }
