@@ -1789,6 +1789,9 @@ max-width: 800px;
     background-color: #7000FF;
 }
 
+.black-bg{
+background-color: black;
+}
 .round-corners {
      border-radius: 10px;
 }
@@ -1801,4 +1804,8 @@ max-width: 800px;
 .galaxy-bg-purple-gradient{
 
     background: linear-gradient(180deg, rgba(112,0,255,1) 0%, rgba(21,22,27,1) 100%);
+}
+.galaxy-bg-to-black{
+
+    background: linear-gradient(180deg, rgba(21,22,27,1) 0%, rgba(0,0,0,1) 100%);
 }
