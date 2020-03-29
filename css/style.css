@@ -1801,8 +1801,17 @@ max-width: 800px;
 .black-bg{
 background-color: black;
 }
+
 .round-corners {
      border-radius: 10px;
+}
+
+.left-round-corners{
+    border-radius: 10px 0px 0px 10px;
+}
+
+.right-round-corners{
+    border-radius: 0px 10px 10px 0px;
 }
 
 .mutiply-blend-mode{
