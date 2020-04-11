@@ -37,6 +37,26 @@ p{
   line-height: 32px;
   font-weight: 300;
 }
+a:link {
+    color: #ff1cb3;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color:#1cffc5 ;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #1cffc5;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
 
 .fadeffect{
     width: 100%;
@@ -103,15 +123,15 @@ section{
 .midnightHeader.dark .logo{
     background: url(../img/logo-b.svg) left top no-repeat;
     background-size: 100%;
-    width: 245px;
-    height: 21px;
+    width: 300px;
+    height: 25px;
 }
 
 .midnightHeader.white .logo{
     background: url(../img/logo-w.svg) left top no-repeat;
     background-size: 100%;
-    width: 245px;
-    height: 21px;
+    width: 300px;
+    height: 25px;
 }
 
 .midnightInner{
@@ -664,6 +684,7 @@ svg #wheel {
     position: relative;
     font-weight: 600;
     height: 60px;
+    letter-spacing: -0.5px;
 }
 
 .section-title:after{
@@ -690,7 +711,6 @@ svg #wheel {
   font-size: 26px;
     font-weight: 500;
     line-height: 42px;
-    letter-spacing: -1px;
 }
 
 .dark-bg .motto .text{
@@ -710,6 +730,7 @@ svg #wheel {
 .subtitle{
     font-size: 25px;
     font-weight: 600;
+    letter-spacing: -1px;
 }
 
 .dark-bg .subtitle{
@@ -921,13 +942,13 @@ svg #wheel {
 
 .portfolio-item figcaption .title{
     font-size: 23px;
+    letter-spacing: -1px;
 }
 
 .portfolio-item figcaption span{
     font-size: 12px;
     font-weight: 300;
     line-height: 30px;
-    letter-spacing: 1px;
 }
 
 .portfolio-item figcaption{
@@ -997,6 +1018,7 @@ svg #wheel {
   transform: translateY(0px);
   opacity: 1;
   transition: all ease 0.5s 0.4s;
+  letter-spacing: -1px;
 }
 
 .hero.load .hero-content .category{
@@ -1014,6 +1036,7 @@ svg #wheel {
 .hero .hero-content .title{  
     transform: translateY(30px);
     opacity: 0;
+    letter-spacing: -1px;
 }
 
 .hero.load .down-icon{
@@ -1061,6 +1084,7 @@ header.load{
     color: #F2F2F2;
     font-size: 60px;
     font-weight: 700;
+    letter-spacing: -1px;
 }
 
 .hero-content .category{
@@ -1088,11 +1112,13 @@ section.dark.galaxy-bg .project-detail .title, section.dark.galaxy-bg .project-d
 .project-detail .title{
     font-size: 40px;
     font-weight: 700;
+    letter-spacing: -1px;
 }
 
 .project-detail .subtitle{
     font-size: 30px;
     font-weight: 700;
+    letter-spacing: -1px;
 }
 
 .lightbox-gallery .image img{
@@ -1115,12 +1141,14 @@ section.dark.galaxy-bg .project-detail .title, section.dark.galaxy-bg .project-d
     color: #161616;
     font-size: 33px;
     font-weight: 600;
+    letter-spacing: -1px;
 }
 
 .next-link .next-title {
     color: #161616;
     font-size: 30px;
     font-weight: 600;
+    letter-spacing: -1px;
 }
 
 .next-link .next-title,
@@ -1129,6 +1157,7 @@ section.dark.galaxy-bg .project-detail .title, section.dark.galaxy-bg .project-d
     -webkit-transform: translateY(0);
     transition: all ease 0.2s;
     -webkit-transition: all ease 0.2s;
+    letter-spacing: -1px;
 }
 
 .next-link:hover .next-title,
@@ -1137,6 +1166,7 @@ section.dark.galaxy-bg .project-detail .title, section.dark.galaxy-bg .project-d
     -webkit-transform: translateY(-100%);
     transition: all ease 0.2s;
     -webkit-transition: all ease 0.2s;
+    letter-spacing: -1px;
 }
 
 .lightbox {
@@ -1337,6 +1367,7 @@ section.dark.galaxy-bg .project-detail .title, section.dark.galaxy-bg .project-d
     font-weight: 500;
     color: #161616;
     text-align: center;
+    letter-spacing: -1px;
 }
 
 .contact .map iframe{
@@ -1449,14 +1480,17 @@ footer .social-icons{
 
     .hero-content .title {
         font-size: 40px !important;
+        letter-spacing: -1px;
     }
 
     .project-detail .title {
         font-size: 34px !important; 
+        letter-spacing: -1px;
     }
 
     .project-detail .title{ 
         margin-top: 0px;
+        letter-spacing: -1px;
     }
 
     p {
@@ -1791,6 +1825,11 @@ max-width: 800px;
 .galaxy-bg{
 
     background-color: #15161B;
+}
+
+.hotpink-bg{
+
+    background-color: #ff1cb3;
 }
 
 .galaxy-bg-purple{

@@ -65,6 +65,7 @@
 
     .portfolio-item figcaption .title {
         font-size: 19px;
+        letter-spacing: -2px;
     }
 
     .portfolio-item.video .video-wrapper{
