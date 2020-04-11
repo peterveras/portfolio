@@ -34,14 +34,17 @@
 
     .hero-content .title {
         font-size: 40px !important;
+        letter-spacing: -1px;
     }
 
     .project-detail .title {
         font-size: 34px !important; 
+        letter-spacing: -1px;
     }
 
     .project-detail .title{ 
         margin-top: 0px;
+        letter-spacing: -1px;
     }
 
     p {
@@ -61,6 +64,7 @@
     .portfolio-item figcaption {
         bottom: 11px;
         left: 15px;
+        letter-spacing: -1px;
     }
 
     .portfolio-item figcaption .title {
