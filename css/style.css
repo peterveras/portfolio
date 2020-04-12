@@ -1418,11 +1418,6 @@ footer a{
     opacity: 1;
 }
 
-footer a:hover{
-    color: #F2F2F2;
-    opacity: .5;
-    transition: all ease 0.3s;
-}
 
 footer .copyright{
     color: #ababab;
