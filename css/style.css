@@ -1672,7 +1672,7 @@ footer .social-icons {
   }
 
   .grid-item:hover {
-    transform: scale(1) !important;
+    transform: translatey(-10px) !important;
   }
 
   .portfolio-item:hover {

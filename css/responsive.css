@@ -1,239 +1,272 @@
-/* Responsive */  
+/* Responsive */
 
 @media screen and (min-width: 1280px) {
-
-    .container {
-        width: 1300px;
-    }
-
+  .container {
+    width: 1300px;
+  }
 }
-
 
 @media screen and (min-width: 1681px) {
+  .container {
+    width: 1500px;
+  }
 
-    .container {
-        width: 1500px;
-    }
+  .masonry .col,
+  .masonry .col-1,
+  .masonry .col-10,
+  .masonry .col-11,
+  .masonry .col-12,
+  .masonry .col-2,
+  .masonry .col-3,
+  .masonry .col-4,
+  .masonry .col-5,
+  .masonry .col-6,
+  .masonry .col-7,
+  .masonry .col-8,
+  .masonry .col-9,
+  .masonry .col-lg,
+  .masonry .col-lg-1,
+  .masonry .col-lg-10,
+  .masonry .col-lg-11,
+  .masonry .col-lg-12,
+  .masonry .col-lg-2,
+  .masonry .col-lg-3,
+  .masonry .col-lg-4,
+  .masonry .col-lg-5,
+  .masonry .col-lg-6,
+  .masonry .col-lg-7,
+  .masonry .col-lg-8,
+  .masonry .col-lg-9,
+  .masonry .col-md,
+  .masonry .col-md-1,
+  .masonry .col-md-10,
+  .masonry .col-md-11,
+  .masonry .col-md-12,
+  .masonry .col-md-2,
+  .masonry .col-md-3,
+  .masonry .col-md-4,
+  .masonry .col-md-5,
+  .masonry .col-md-6,
+  .masonry .col-md-7,
+  .masonry .col-md-8,
+  .masonry .col-md-9,
+  .masonry .col-sm,
+  .masonry .col-sm-1,
+  .masonry .col-sm-10,
+  .masonry .col-sm-11,
+  .masonry .col-sm-12,
+  .masonry .col-sm-2,
+  .masonry .col-sm-3,
+  .masonry .col-sm-4,
+  .masonry .col-sm-5,
+  .masonry .col-sm-6,
+  .masonry .col-sm-7,
+  .masonry .col-sm-8,
+  .masonry .col-sm-9,
+  .masonry .col-xl,
+  .masonry .col-xl-1,
+  .masonry .col-xl-10,
+  .masonry .col-xl-11,
+  .masonry .col-xl-12,
+  .masonry .col-xl-2,
+  .masonry .col-xl-3,
+  .masonry .col-xl-4,
+  .masonry .col-xl-5,
+  .masonry .col-xl-6,
+  .masonry .col-xl-7,
+  .masonry .col-xl-8,
+  .masonry .col-xl-9 {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
 
-    .masonry .col, .masonry .col-1, .masonry .col-10, .masonry .col-11, .masonry .col-12, .masonry .col-2, .masonry .col-3, .masonry .col-4, .masonry .col-5, .masonry .col-6, .masonry .col-7, .masonry .col-8, .masonry .col-9, .masonry .col-lg, .masonry .col-lg-1, .masonry .col-lg-10, .masonry .col-lg-11, .masonry .col-lg-12, .masonry .col-lg-2, .masonry .col-lg-3, .masonry .col-lg-4, .masonry .col-lg-5, .masonry .col-lg-6, .masonry .col-lg-7, .masonry .col-lg-8, .masonry .col-lg-9, .masonry .col-md, .masonry .col-md-1, .masonry .col-md-10, .masonry .col-md-11, .masonry .col-md-12, .masonry .col-md-2, .masonry .col-md-3, .masonry .col-md-4, .masonry .col-md-5, .masonry .col-md-6, .masonry .col-md-7, .masonry .col-md-8, .masonry .col-md-9, .masonry .col-sm, .masonry .col-sm-1, .masonry .col-sm-10, .masonry .col-sm-11, .masonry .col-sm-12, .masonry .col-sm-2, .masonry .col-sm-3, .masonry .col-sm-4, .masonry .col-sm-5, .masonry .col-sm-6, .masonry .col-sm-7, .masonry .col-sm-8, .masonry .col-sm-9, .masonry .col-xl, .masonry .col-xl-1, .masonry .col-xl-10, .masonry .col-xl-11, .masonry .col-xl-12, .masonry .col-xl-2, .masonry .col-xl-3, .masonry .col-xl-4, .masonry .col-xl-5, .masonry .col-xl-6, .masonry .col-xl-7, .masonry .col-xl-8, .masonry .col-xl-9 {
-        padding-right: 30px;
-        padding-left: 30px;
-    }
-
-    .portfolio-item{
-        margin-bottom: 60px;
-       
-    }
-
-
+  .portfolio-item {
+    margin-bottom: 60px;
+  }
 }
-
-
 
 @media screen and (max-width: 768px) {
+  .hero-content .title {
+    font-size: 40px !important;
+    letter-spacing: -1px;
+  }
 
-    .hero-content .title {
-        font-size: 40px !important;
-        letter-spacing: -1px;
-    }
+  .project-detail .title {
+    font-size: 34px !important;
+    letter-spacing: -1px;
+  }
 
-    .project-detail .title {
-        font-size: 34px !important; 
-        letter-spacing: -1px;
-    }
+  .project-detail .title {
+    margin-top: 0px;
+    letter-spacing: -1px;
+  }
 
-    .project-detail .title{ 
-        margin-top: 0px;
-        letter-spacing: -1px;
-    }
+  p {
+    font-size: 15px;
+    line-height: 30px;
+  }
 
-    p {
-        font-size: 15px;
-        line-height: 30px;
-    }
+  .contact-form {
+    margin-top: 30px;
+  }
 
-    .contact-form{
-        margin-top: 30px;
-    }
+  .navmenu > li > a {
+    font-size: 30px;
+    line-height: 29px;
+  }
 
-    .navmenu > li > a {
-        font-size: 30px;
-        line-height: 29px;
-    }
+  .portfolio-item figcaption {
+    bottom: 11px;
+    left: 15px;
+    letter-spacing: -1px;
+  }
 
-    .portfolio-item figcaption {
-        bottom: 11px;
-        left: 15px;
-        letter-spacing: -1px;
-    }
+  .portfolio-item figcaption .title {
+    font-size: 19px;
+    letter-spacing: -2px;
+  }
 
-    .portfolio-item figcaption .title {
-        font-size: 19px;
-        letter-spacing: -2px;
-    }
+  .portfolio-item.video .video-wrapper {
+    visibility: hidden;
+  }
 
-    .portfolio-item.video .video-wrapper{
-        visibility: hidden;
-    }
+  .portfolio-item.video .image {
+    visibility: visible !important;
+  }
 
-    .portfolio-item.video .image{
-        visibility: visible !important;
-    }
+  .hero .video-wrapper {
+    visibility: hidden;
+  }
 
-    .hero .video-wrapper{
-        visibility: hidden;
-    }
+  .hero .mobile-image {
+    visibility: visible !important;
+  }
 
-    .hero .mobile-image{
-        visibility: visible !important;
-    }
+  .grid-item:hover {
+    transform: translatey(-10px) !important;
+  }
 
-    .grid-item:hover {
-        transform: scale(1.0) !important;
-    }
+  .portfolio-item:hover {
+    box-shadow: none !important;
+  }
 
-    .portfolio-item:hover{
-        box-shadow: none !important;
-    }
+  .portfolio-item:hover:before {
+    background: none !important;
+  }
 
-    .portfolio-item:hover:before {
-        background: none !important;
-    }
+  .portfolio-item:hover figcaption {
+    transform: translateZ(0px) !important;
+  }
 
-    .portfolio-item:hover figcaption {
-        transform: translateZ(0px) !important;
-    }
+  header .midnightInner {
+    padding: 25px;
+  }
 
-    header .midnightInner{
-        padding: 25px;
-    }
-
-    .navmenu > li > a:hover {
-        opacity: 1 !important;
-        transition: none !important;
-    }
-.navmenu > li > a {
+  .navmenu > li > a:hover {
+    opacity: 1 !important;
+    transition: none !important;
+  }
+  .navmenu > li > a {
     position: relative;
-    z-index: 10000;    
+    z-index: 10000;
     width: 100% !important;
-}
+  }
 
-.filter-icon.come .categories{
+  .filter-icon.come .categories {
     display: none !important;
-}
+  }
 
-
-.filter-icon.come {
-    background: #F2F2F2;
+  .filter-icon.come {
+    background: #f2f2f2;
     padding: 7px;
-    height: 33px;    
+    height: 33px;
     bottom: 20px;
     left: 25px !important;
+  }
 }
-
-
-}
-
-
-
 
 @media screen and (max-width: 580px) {
-
-.home.white-bg .text{
+  .home.white-bg .text {
     font-size: 50px !important;
     letter-spacing: -1px !important;
-}
+  }
 
-.icon-circle {
+  .icon-circle {
     width: 30px !important;
-    height: 30px !important;    
+    height: 30px !important;
     margin-top: -18px !important;
     margin-left: -15px !important;
-}
-.down-icon{
+  }
+  .down-icon {
     width: 30px !important;
     height: 30px !important;
     margin: 0 auto 60px !important;
+  }
 
-}
-
-.down-icon .icon{
+  .down-icon .icon {
     font-size: 12px !important;
-}
+  }
 
-.section-title.bottom_90, .motto.bottom_60{
+  .section-title.bottom_90,
+  .motto.bottom_60 {
     margin-bottom: 30px;
-}
+  }
 
-.section-title {
+  .section-title {
     font-size: 26px;
-}
+  }
 
-.motto .text {
+  .motto .text {
     font-size: 22px;
     line-height: 35px;
-}
+  }
 
-br {
+  br {
     display: none;
-}
+  }
 
-.subtitle.top_120.bottom_90{
-  margin: 80px 0 60px;
-}
+  .subtitle.top_120.bottom_90 {
+    margin: 80px 0 60px;
+  }
 
-.feature{
-  margin-bottom: 30px;
-}
+  .feature {
+    margin-bottom: 30px;
+  }
 
-.row.top_120.testimonials{
-      margin: 15px auto;
-}
+  .row.top_120.testimonials {
+    margin: 15px auto;
+  }
 
-.contact-info, .contact-form{
+  .contact-info,
+  .contact-form {
     text-align: center !important;
-}
+  }
 
-.contact .contact-info p {
+  .contact .contact-info p {
     line-height: 20px !important;
-}
+  }
 
-.navmenu > li > a {
+  .navmenu > li > a {
     font-size: 26px !important;
     letter-spacing: -1px !important;
-}
+  }
 
-footer .social a {
+  footer .social a {
     margin-right: 20px;
     font-size: 12px;
-}
+  }
 
-
-.uptotop{
+  .uptotop {
     width: 20px !important;
-}
+  }
 
-.filter-icon {
+  .filter-icon {
     left: 30px !important;
-}
+  }
 
-.same-height {
+  .same-height {
     width: auto;
     height: 500px;
     overflow: hidden;
+  }
 }
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
