@@ -1493,6 +1493,13 @@ footer .social-icons {
 
 /* Responsive */
 
+@media (min-width: 576px) {
+  .container {
+    width: auto;
+    max-width: 100%;
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     width: auto;
