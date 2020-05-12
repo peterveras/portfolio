@@ -124,6 +124,13 @@ section {
   height: 24px;
 }
 
+.midnightHeader.dark .logo-pink {
+  background: url(../img/logo-pink.svg) left top no-repeat;
+  background-size: 100%;
+  width: 250px;
+  height: 24px;
+}
+
 .midnightHeader.white .logo {
   background: url(../img/logo-w.svg) left top no-repeat;
   background-size: 100%;
@@ -234,7 +241,6 @@ section {
 }
 
 /* Nav Icon */
-
 .nav-icon span {
   display: block;
   position: absolute;
