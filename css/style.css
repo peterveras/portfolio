@@ -48,7 +48,7 @@ a:visited {
   text-decoration: none;
 }
 a:hover {
-  color: #1cffc5;
+  color: #d402f5;
   background-color: transparent;
   text-decoration: underline;
 }
@@ -1320,15 +1320,17 @@ section.dark.galaxy-bg .next-link .next-title {
 
 .client {
   opacity: 0.5;
-  cursor: pointer;
+  /*  cursor: pointer; */
 }
 
+/*
 .client:hover {
   opacity: 1;
   transition: all ease 0.3s;
   -webkit-transition: all ease 0.3s;
   -moz-transition: all ease 0.3s;
 }
+*/
 
 .white-bg .client {
   opacity: 1;
