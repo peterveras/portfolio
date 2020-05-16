@@ -123,6 +123,12 @@ section {
   width: 250px;
   height: 24px;
 }
+.logo :hover {
+  background: url(../img/logo-pink.svg) left top no-repeat;
+  background-size: 100%;
+  width: 250px;
+  height: 24px;
+}
 
 .midnightHeader.dark .logo-pink {
   background: url(../img/logo-pink.svg) left top no-repeat;
@@ -210,6 +216,12 @@ section {
   transform: translateX(-26px) translateY(-41px) rotate(-90deg);
   transition: all ease 0.3s;
   opacity: 1;
+}
+.plus-cursor {
+  cursor: url(../img/Plus-cursor.svg), auto;
+}
+.plus-cursor:hover {
+  opacity: 0.3;
 }
 
 .uptotop .midnightHeader.white .arrow {
