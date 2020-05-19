@@ -218,7 +218,7 @@ section {
   opacity: 1;
 }
 .plus-cursor {
-  cursor: url(../img/Plus-cursor.svg), auto;
+  cursor: url(../img/Eyeglass-cursor.svg), auto;
 }
 .plus-cursor:hover {
   opacity: 0.3;
