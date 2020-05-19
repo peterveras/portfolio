@@ -509,7 +509,7 @@ section {
   opacity: 0;
   width: 100%;
   height: 100%;
-  cursor: url(../img/close-2.png), e-resize;
+  cursor: url(../img/X-Close.svg), auto;
 }
 
 .menu-container {
