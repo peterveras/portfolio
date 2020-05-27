@@ -161,6 +161,11 @@ section {
   background-size: 60%;
 }
 
+.lightdark-bg {
+  background: center center no-repeat rgb(31, 31, 31);
+  background-size: 60%;
+}
+
 .dark-bg {
   background: center center no-repeat rgb(21, 21, 21);
   background-size: 60%;
