@@ -33,6 +33,11 @@
   padding-right: 30px 0;
 }
 
+.padding_60_right_side {
+  padding-left: 0;
+  padding-right: 60px 0;
+}
+
 .padding_45 {
   padding: 45px 0;
 }
