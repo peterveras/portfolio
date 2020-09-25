@@ -58,6 +58,27 @@ a:active {
   text-decoration: underline;
 }
 
+#pills-home-tab {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+#pills-home-tab {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+#pills-home-tab {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+#pills-home-tab {
+  color: wh ite;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 .fadeffect {
   width: 100%;
   height: 100%;
@@ -1980,6 +2001,9 @@ footer .social-icons {
 
 .galaxy-bg-purple {
   background-color: #7000ff;
+}
+.galaxy-bg-purple-light {
+  background-color: #6300e2;
 }
 
 .galaxy-bg-purple-shade {
