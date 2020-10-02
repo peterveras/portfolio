@@ -62,6 +62,18 @@ a:active {
   color: white;
   background-color: transparent;
   text-decoration: none;
+  transition: all 500ms ease;
+}
+
+.nav-pills .nav-link {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.nav-item > li > a:hover {
+  font-size: 18px;
+  transition: all 500ms ease;
 }
 
 #black-link {
