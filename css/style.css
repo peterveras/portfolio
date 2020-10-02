@@ -58,26 +58,16 @@ a:active {
   text-decoration: underline;
 }
 
-#pills-home-tab {
+#white-link {
   color: white;
   background-color: transparent;
   text-decoration: none;
 }
 
-#pills-home-tab {
-  color: white;
+#black-link {
+  color: black;
   background-color: transparent;
   text-decoration: none;
-}
-#pills-home-tab {
-  color: white;
-  background-color: transparent;
-  text-decoration: underline;
-}
-#pills-home-tab {
-  color: wh ite;
-  background-color: transparent;
-  text-decoration: underline;
 }
 
 .fadeffect {
@@ -2059,4 +2049,44 @@ footer .social-icons {
     rgba(0, 0, 0, 1) 0%,
     rgba(21, 22, 27, 1) 100%
   );
+}
+.product_img {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+  object-fit: fill;
+}
+
+.product_box {
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  object-fit: fill;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #008cba;
+}
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.padding_10_item {
+  padding: 10px 10px 10px 20px;
 }
