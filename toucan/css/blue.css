@@ -202,54 +202,54 @@ button.navbar-toggler:focus {
 }
 
 .secondary-btn {
-  background: none;
-  border: solid 2px white;
+  background: var(--color-secondary);
+  border: solid 2px var(--color-tertiary);
   padding: 10px 41px;
   outline: 0;
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
   min-width: 160px;
-  color: white;
+  color: var(--color-tertiary);
   text-transform: uppercase;
 }
 
 .secondary-btn:hover {
-  background: white;
-  border: solid 2px white;
+  background: var(--color-tertiary);
+  border: solid 2px var(--color-secondary);
   padding: 10px 41px;
   outline: 0;
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
   min-width: 160px;
-  color: #232325;
+  color: var(--color-secondary);
   text-transform: uppercase;
 }
 
 .tertiary-btn {
-  background: #232325;
-  border: solid 2px #232325;
+  background: var(--color-secondary);
+  border: solid 2px var(--color-secondary);
   padding: 10px 41px;
   outline: 0;
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
   min-width: 160px;
-  color: whitesmoke;
+  color: var(--font-color);
   text-transform: uppercase;
 }
 
 .tertiary-btn:hover {
-  background: white;
-  border: solid 2px white;
+  background: var(--color-tertiary);
+  border: solid 2px var(--color-tertiary);
   padding: 10px 41px;
   outline: 0;
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
   min-width: 160px;
-  color: #232325;
+  color: var(--color-secondary);
   text-transform: uppercase;
 }
 
