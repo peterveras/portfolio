@@ -34,14 +34,14 @@
   --color-secondary: white;
   --color-tertiary: #232325;
   --font-color: #232325;
-  --toggle-menu-icon: url("../img/icons/menu-light.svg");
+  --toggle-menu-icon: url("/img/icons/menu-light.svg");
 }
 .theme-dark {
   --color-primary: #fa89cf;
   --color-secondary: #232325;
   --color-tertiary: white;
   --font-color: whitesmoke;
-  --toggle-menu-icon: url("../img/icons/menu-dark.svg");
+  --toggle-menu-icon: url("/img/icons/menu-dark.svg");
 }
 
 /* 1. Navigation */
