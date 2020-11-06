@@ -35,7 +35,7 @@
   --color-tertiary: #232325;
   --font-color: #232325;
   --links-color: #e60073;
-  --toggle-menu-icon: url("../img/icons/menu-light.svg");
+  --toggle-menu-icon: url("/toucan/img/icons/menu-light.svg");
 }
 .theme-dark {
   --color-primary: #26e482;
