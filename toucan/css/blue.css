@@ -34,14 +34,14 @@
   --color-secondary: white;
   --color-tertiary: #232325;
   --font-color: #232325;
-  --toggle-menu-icon: url("../img/icons/menu-light.svg");
+  --toggle-menu-icon: url("/toucan/img/icons/menu-light.svg");
 }
 .theme-dark {
   --color-primary: #3ac3ff;
   --color-secondary: #232325;
   --color-tertiary: white;
   --font-color: whitesmoke;
-  --toggle-menu-icon: url("../img/icons/menu-dark.svg");
+  --toggle-menu-icon: url("/toucan/img/icons/menu-dark.svg");
 }
 
 /* 1. Navigation */
@@ -88,11 +88,11 @@
 /* Left Arrow Icon */
 
 .carousel-control-prev-icon {
-  background-image: url("../img/icons/left-chevron.svg");
+  background-image: url("/toucan/img/icons/left-chevron.svg");
 }
 /* Right Arrow Icon */
 .carousel-control-next-icon {
-  background-image: url("../img/icons/right-chevron.svg");
+  background-image: url("/toucan/img/icons/right-chevron.svg");
 }
 
 .carousel-control-next-icon,
@@ -165,7 +165,7 @@ a.nav-link:hover {
 .hero-img-1 {
   height: 80vh; /* Change this number to change the height of the image */
   min-height: 500px;
-  background-image: url("../img/works/work-9/pexels-steve-johnson-2784948.jpg"); /* Change the image itself here */
+  background-image: url("/toucan/img/works/work-9/pexels-steve-johnson-2784948.jpg"); /* Change the image itself here */
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
