@@ -16,15 +16,16 @@
 3. Links
 4. Hero Images
 5. Buttons
-6. Background Colors
-7. Cards
-8. Modals
-9. Dropdown
-10. Round Corners 
+6. Text Colors
+7. Background Colors
+8. Cards
+9. Modal
+10. Dropdown Menu
 11. Work Thumbnails
 12. Pagination
-13. Opacity
-14. Mansory Layout
+13. Mansory Layout
+14. Selection Color
+15. Screen Readers
 
 ===================== */
 .theme-light {
@@ -32,14 +33,14 @@
   --color-secondary: white;
   --color-tertiary: #232325;
   --font-color: #232325;
-  --toggle-menu-icon: url("/toucan/img/icons/menu-light.svg");
+  --toggle-menu-icon: url("/img/icons/menu-light.svg");
 }
 .theme-dark {
   --color-primary: #d295fc;
   --color-secondary: #232325;
   --color-tertiary: white;
   --font-color: whitesmoke;
-  --toggle-menu-icon: url("/toucan/img/icons/menu-dark.svg");
+  --toggle-menu-icon: url("/img/icons/menu-dark.svg");
 }
 
 /* 1. Navigation */
@@ -79,14 +80,18 @@
   border-color: transparent;
 }
 
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 2px var(--color-tertiary);
+}
+
 /* Left Arrow Icon */
 
 .carousel-control-prev-icon {
-  background-image: url("/toucan/img/icons/left-chevron.svg");
+  background-image: url("/img/icons/left-chevron.svg");
 }
 /* Right Arrow Icon */
 .carousel-control-next-icon {
-  background-image: url("/toucan/img/icons/right-chevron.svg");
+  background-image: url("/img/icons/right-chevron.svg");
 }
 
 .carousel-control-next-icon,
@@ -95,7 +100,7 @@
   height: 30px;
 }
 
-/* 2. Tab */
+/* 2. Tabs */
 
 .active > .nav-link {
   color: var(--font-color);
@@ -155,7 +160,7 @@ a.nav-link:hover {
 .hero-img-1 {
   height: 80vh; /* Change this number to change the height of the image */
   min-height: 500px;
-  background-image: url("/toucan/img/works/work-9/pexels-steve-johnson-2784948.jpg"); /* Change the image itself here */
+  background-image: url("/img/works/work-9/pexels-steve-johnson-2784948.jpg"); /* Change the image itself here */
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
@@ -279,7 +284,7 @@ button.navbar-toggler:focus {
   text-transform: uppercase;
 }
 
-/* 7. Text Colors */
+/* 6. Text Colors */
 .text-color-x {
   color: var(--color-secondary);
 }
@@ -296,7 +301,7 @@ button.navbar-toggler:focus {
   color: var(--font-color);
 }
 
-/* 8. Background Colors */
+/* 7. Background Colors */
 
 .highlight-color {
   background-color: var(--color-primary);
@@ -305,7 +310,7 @@ button.navbar-toggler:focus {
 .bg-color {
   background-color: var(--color-secondary);
 }
-/* 7. Card */
+/* 8. Cards */
 
 .card-body {
   border-radius: 0;
@@ -347,7 +352,7 @@ button.navbar-toggler:focus {
   margin-bottom: 60px;
 }
 
-/* 8. Modal */
+/* 9. Modal */
 
 .modal-content {
   position: relative;
@@ -367,7 +372,7 @@ button.navbar-toggler:focus {
   padding: 0px;
 }
 
-/* 9. Drop Down */
+/* 10. Drop Down Menu */
 
 .dropdown-menu {
   border-radius: 0px;
@@ -390,7 +395,7 @@ button.navbar-toggler:focus {
   background-color: var(--color-primary);
 }
 
-/* 10. Work Thumbnail */
+/* 11. Work Thumbnail */
 
 .work-thumbnail {
 }
@@ -401,7 +406,7 @@ button.navbar-toggler:focus {
   cursor: pointer;
 }
 
-/* 11. Pagination */
+/* 12. Pagination */
 .page-item:last-child .page-link {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
@@ -453,7 +458,7 @@ button.navbar-toggler:focus {
   border-radius: 0;
 }
 
-/* 12. Mansory Layout */
+/* 13. Mansory Layout */
 
 .masonry {
   /* Masonry container */
@@ -463,13 +468,9 @@ button.navbar-toggler:focus {
   -webkit-column-gap: 1em;
   -moz-column-gap: 1em;
   column-gap: 1em;
-  margin: 1.5em;
-  padding: 0;
   -moz-column-gap: 1.5em;
   -webkit-column-gap: 1.5em;
   column-gap: 1.5em;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 .item {
   display: inline-block;
@@ -514,7 +515,7 @@ button.navbar-toggler:focus {
   }
 }
 
-/* Selection Color */
+/* 14. Selection Color */
 
 body p::selection {
   background: var(--color-primary);
@@ -579,4 +580,17 @@ body a::-moz-selection {
 body a::-webkit-selection {
   background: var(--color-primary);
   color: #232325;
+}
+
+/* 15. Screen Readers */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
