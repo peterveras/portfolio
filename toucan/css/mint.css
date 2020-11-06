@@ -26,6 +26,7 @@
 13. Mansory Layout
 14. Selection Color
 15. Screen Readers
+16. Horizontal Rule
 
 ===================== */
 .theme-light {
@@ -131,6 +132,10 @@ a {
 a:hover {
   color: var(--color-secondary);
   text-decoration: underline;
+}
+
+.no-underline {
+  text-decoration: underline var(--color-tertiary);
 }
 
 .nav-link {
@@ -454,6 +459,12 @@ button.navbar-toggler:focus {
   border-radius: 0px;
 }
 
+.page-link:focus {
+  color: var(--color-secondary);
+  background-color: var(--color-tertiary);
+  box-shadow: 0 0 0 0.25rem var(--color-primary);
+}
+
 .card-footer {
   border-radius: 0;
 }
@@ -593,4 +604,10 @@ body a::-webkit-selection {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+/* 16. Horizontal Rule */
+
+hr {
+  border-top: 0.5px solid var(--color-tertiary);
 }
