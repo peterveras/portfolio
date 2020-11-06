@@ -90,11 +90,11 @@
 /* Left Arrow Icon */
 
 .carousel-control-prev-icon {
-  background-image: url("../img/icons/left-chevron.svg");
+  background-image: url("/toucan/img/icons/left-chevron.svg");
 }
 /* Right Arrow Icon */
 .carousel-control-next-icon {
-  background-image: url("../img/icons/right-chevron.svg");
+  background-image: url("/toucan/img/icons/right-chevron.svg");
 }
 
 .carousel-control-next-icon,
