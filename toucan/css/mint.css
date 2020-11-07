@@ -317,6 +317,12 @@ button.navbar-toggler:focus {
 }
 
 /* 7. Background Colors */
+.bg-pale-night {
+  background-color: #303030;
+}
+.bg-pale-night {
+  background-color: #303030;
+}
 
 .highlight-color {
   background-color: var(--color-primary);
