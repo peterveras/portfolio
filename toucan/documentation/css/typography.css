@@ -1,0 +1,91 @@
+body {
+  font-family: "Space Mono", monospace;
+}
+
+h1 {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: left;
+}
+
+h2 {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: left;
+}
+
+h3 {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: left;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 2.5rem;
+  text-align: left;
+  font-size: 16px;
+}
+
+a {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 16px;
+  opacity: 100%;
+}
+
+ul {
+  font-family: "Montserrat", sans-serif;
+  padding-inline-start: 20px;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-white:hover {
+  color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+/*Links Styling */
+
+.black-link {
+  color: #232325;
+  text-decoration: underline;
+}
+
+.black-link :hover {
+  opacity: 50%;
+}
+
+.white-link {
+  color: white;
+  text-decoration: underline;
+}
+
+.white-link-no-underline {
+  color: white;
+}
+.black-link-no-underline {
+  color: #232325;
+}
+
+.black-link-no-underline :hover {
+  opacity: 100%;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-black-60 {
+  color: rgba(0, 0, 0, 0.6);
+}

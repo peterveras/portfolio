@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Favicon -->
+<link rel="icon" href="img/icons/favicon-friend.svg">
+<!-- Title next to favicon -->
+<title>Toucan Theme Documentation</title>
+<!-- Rich Preview When Sharig on Messages, Whatsapp, the internet in general -->
+<meta property="og:title" content="Friend theme Documentation">
+<meta property="og:image" content="img/icons/preview-img.png">
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="css/theme-style.css" rel="stylesheet">
+<!-- Spacing: Marging and Padding -->
+<link href="css/spacing.css" rel="stylesheet">
+<!-- Typography: Fonts -->
+<link href="css/typography.css" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body id="" class="bg-color">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-color fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger highlight-color" href="#page-top">
+                <h2 class="p-3 mb-0 text-uppercase text-nav">Documentation</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item padding_30_left">
+                        <a class="nav-link js-scroll-trigger" href="#overview">
+                            <h3 class="text-color">Overview</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item padding_30_left">
+                        <a class="nav-link js-scroll-trigger" href="#colors">
+                            <h3 class="text-color">Colors</h3>
+                        </a>
+                    </li>
+
+                    <li class="nav-item padding_30_left">
+                        <a class="nav-link js-scroll-trigger" href="#fonts">
+                            <h3 class="text-color">Fonts</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item padding_30_left">
+                        <a class="nav-link js-scroll-trigger" href="#components">
+                            <h3 class="text-color">Components</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item padding_30_left">
+                        <a class="nav-link js-scroll-trigger no-padding-right" onclick="toggleTheme()">
+                            ◐
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation -->
+
+    <!-- === Main Content === -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12">
+                <!-- Overview -->
+                <div id="overview" class="padtop_90">
+                    <h1 class="text-color padbot_30">Overview</h1>
+                    <p class="text-color">Thanks for purchasing this theme, this is how everything is organized:</p>
+                    <pre class="bg-pale-night rounded p-2">
+                            <code class="text-white flex-wrap">
+    ../toucan-theme
+    |
+    |                            
+    └── ─→ css &#40;folder with all the CSS files needed for theme&#41;
+    |       |
+    |       ├── ─→ spacing.css &#40;custome paddding and marging&#41;
+    |       |
+    |       └── ─→ theme-style.css &#40;property for background colors, tabs, links, buttons, cards, etc.&#41;
+    |       |
+    |       └── ─→ typography.css &#40;declarations for selectors like h1, h2, h3, p, a, etc.&#41;
+    |       
+    |
+    ├── ─→ img [ folder for images ]
+    |       |
+    |       ├─ ─→ icons &#40;hamburger icon, left arrow, right arrow, and preview image&#41;
+    |       |
+    |       └── ─→ shop &#40;images for shop page&#41;
+    |       |
+    |       └── ─→ works &#40;images for work pages&#41;
+    |
+    |    
+    ├── ─→ js &#40;Folder with JavaScript files for Bootstrap&#41;
+    |   
+    ├── ─→ Vendor &#40;Folder with compiled files of Bootstrap&#41;
+    |
+    |   ↓↓↓↓ <i>These are the only files you need to worry about</i> ↓↓↓↓
+    |
+    ├── ─→ blog.html 
+    ├── ─→ index.html
+    ├── ─→ post.html
+    ├── ─→ shop.html
+    ├── ─→ tabs.html
+    ├── ─→ work-1.html
+    └── ─→ work-2.html
+            </code>
+            </pre>
+                </div>
+                <!-- Overview -->
+
+                <!-- Colors  -->
+                <div id="colors" class="padtop_30">
+                    <hr>
+                    <h1 class="text-color padbot_30">Colors</h1>
+                    <p class="text-color">This template comes with 8 different color choices. However, if none
+                        of those float your boat; changing the highlight color to any other color is pretty simple.
+                    </p>
+                    <div class="bg-pale-night">
+                        <img class="d-block w-100 padtop_60  p-3" src="img/documentation/Colors.png" alt="purple">
+
+                    </div>
+                    <p class="text-color top_30">
+                        1. go to the <code>theme-style.css</code> file and find the hex number
+                        of the highlight color in lines 31 and 38. In this example, below, the highlight color is
+                        &#35;26E482 &#40;Mint&#41;. We will change it to &#35;FEE200 &#40;yellow&#41</p>
+
+                    <p class="text-color pt-2">
+                        2. This color is mentioned 3 times, if we count the hex number in the favicon. Doing a
+                        search-and-replace
+                        change would be the fastes way. Here is an example using Visual Studio Code:
+                        <img class="d-block w-100 padtop_30" src="img/documentation/replace-visual-studio-code.png"
+                            alt="Visual Studio Code">
+                    </p>
+                    <h2 class="text-color padtop_30">Text on Navbar</h2>
+                    <p class="text-color">
+                        &#40;Optional&#41; change the color of the text sitting over the highlight color on the
+                        navbar, for example in the case of this page would be the word "Documentation" in your template
+                        it should say "Toucan"</p>
+                    <ul class="text-color">
+                        <li>
+                            Go to the tag <code>&#60;nav&#62;&#60;/nav&#62;</code> on the top of your html pages
+                        </li>
+                        <li>
+                            <p>
+                                If you want that text to be white, change the class <code>text-nav</code> to
+                                <code>text-white</code>. This is where that is locate:
+                                <code>
+
+                                    <pre class="bg-pale-night rounded" style="color:#f5f5f5;"><span style="color:#9999a9; ">
+     &lt;!-- Navigation --&gt;</span> 
+        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">nav</span> class<span style="color:#f5f5f5; ">=</span><span style="color:#26e482; ">"navbar navbar-expand-lg navbar-light bg-color fixed-top"</span> id<span style="color:#f5f5f5; ">=</span><span style="color:#26e482; ">"mainNav"</span><span style="color:#f8e947; ">&gt;</span> 
+             <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f5f5f5; ">=</span><span style="color:#26e482; ">"container"</span><span style="color:#f8e947; ">&gt;</span> 
+                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#f5f5f5; ">=</span><span style="color:#26e482; ">"navbar-brand js-scroll-trigger highlight-color"</span> href<span style="color:#f5f5f5; ">=</span><span style="color:#26e482; ">"#page-top"</span><span style="color:#f8e947; ">&gt;</span> 
+                     <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">h2</span> class<span style="color:#f5f5f5; ">=</span><span style="color:#26e482; ">"p-3 mb-0 text-uppercase text-nav"</span><span style="color:#f8e947; ">&gt;</span>Documentation<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">h2</span><span style="color:#f8e947; ">&gt;</span> 
+                ...
+        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">nav</span><span style="color:#f8e947; ">&gt;</span>
+                                </pre>
+     
+                                    </code>
+                                This step is optional since the black text may read well on the color you chose.
+                                However, if the color you chose is of a dark hue–the color white may offer a better
+                                contrast.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                If you want that text to be of a color other than white, go to the
+                                <code>theme-style.css</code> file
+                                and find in line 51 the class <code>.tex-nav</code>, change there the color to any hex
+                                color you want.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Colors -->
+
+                <!-- Google Fonts  -->
+                <div id="fonts" class="padtop_30">
+                    <div class="">
+                        <hr>
+                        <h1 class="text-color padbot_30">Google Fonts</h1>
+                        <p class="text-color">Fonts are fun and fortunately they are easy to implement. I am using
+                            Goolge fonts, check what they got <a href="https://fonts.google.com/">here</a>.
+                        </p>
+
+                        <p class="text-color top_30">
+                            1. Copy the font family or font families' links into the
+                            <code>&lt;head&gt;</code>
+                            of your html pages. For example, the fonts I am using in this page are Mono Space for
+                            titles and Montserrat for paragraphs. The links look like this:
+                        </p>
+                        <code></code>
+
+
+                        <pre class="bg-pale-night rounded p-3 padbot_60" style="color:#f5f5f5;">
+<span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">link</span> href<span style="color:#f5f5f5; ">=</span><span style="color:#26e482; ">"https://fonts.googleapis.com/css2?family=Space+Mono&amp;display=swap"</span> rel<span style="color:#f5f5f5; ">=</span><span style="color:#26e482; ">"stylesheet"</span><span style="color:#f8e947; ">&gt;</span>
+<span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">link</span> href<span style="color:#f5f5f5; ">=</span><span style="color:#26e482; ">"https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap"</span> rel<span style="color:#f5f5f5; ">=</span><span style="color:#26e482; ">"stylesheet"</span><span style="color:#f8e947; ">&gt;</span>
+</pre>
+
+
+                        </code>
+
+                        <p class="text-color top_30">
+                            2. Go to the <code>typography.css</code> file and change the
+                            font attributes on the declaration: body, p, li, a, h1, h2, and h3 with the font you
+                            linked. Again, that search-and-replace feature can help. The code will look something like
+                            this:
+                        </p>
+
+                        <code>
+
+<pre class="bg-pale-night rounded p-3 padbot_60" style="color:#f5f5f5;">
+<span style="color:#AB8ECF; font-weight:bold; ">h1</span> <span style="color: #f8e947; ">{</span> 
+    <span style="color:#f5f5f5; ">font-family</span><span style="color:#f5f5f5; ">:</span> <span style="color:#02d045; ">"</span><span style="color:#26e482; ">Space Mono</span><span style="color:#02d045; ">"</span><span style="color:#f5f5f5; ">,</span> monospace<span style="color:#b060b0; ">;</span> 
+    <span style="color: #f8e947; ">}</span>
+
+<span style="color:#AB8ECF; font-weight:bold; ">p</span> <span style="color: #f8e947; ">{</span> 
+    <span style="color:#f5f5f5; ">font-family</span><span style="color:#f5f5f5; ">:</span> <span style="color:#02d045; ">"</span><span style="color:#26e482; ">Montserrat</span><span style="color:#02d045; ">"</span><span style="color:#f5f5f5; ">,</span> sans-serif<span style="color:#b060b0; ">;</span> 
+    <span style="color: #f8e947; ">}</span>
+</pre>
+
+                                </code>
+
+                    </div>
+                </div>
+                <!-- Google Fonts -->
+
+                <!-- Dark -->
+                <div id="components" class="bg-color padtop_30 ">
+                    <div class="pb-4">
+                        <hr>
+                        <h1 class="text-color padbot_30">Components</h1>
+                        <p class="text-color">These are all the components that come with this theme</p>
+                        <h3 class="text-color top_30">
+                            Navbar:
+                        </h3>
+                        <!-- Navigation -->
+                        <div class="padbot_30">
+                            <img class="d-block w-100" src="img/documentation/light-navbar.png">
+                        </div>
+                        <!-- Navigation -->
+                        <code>
+    <pre class="rounded bg-pale-night" style="color:#FFFFFF;"> 
+    <span style="color:#9999a9; ">&lt;!-- Navigation --&gt;</span>
+        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">nav</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"navbar navbar-expand-lg navbar-light bg-color fixed-top"</span> id<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"mainNav"</span><span style="color:#f8e947; ">&gt;</span>
+          <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"container"</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"navbar-brand js-scroll-trigger highlight-color"</span> href<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"#page-top"</span><span style="color:#f8e947; ">&gt;</span>
+              <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">h2</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"p-3 mb-0 text-uppercase text-nav"</span><span style="color:#f8e947; ">&gt;</span>Toucan<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">h2</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">button</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"navbar-toggler"</span> type<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"button"</span> data-toggle<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"collapse"</span> data-target<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"#navbarResponsive"</span>
+              aria-controls<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"navbarResponsive"</span> aria-expanded<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"false"</span> aria-label<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"Toggle navigation"</span><span style="color:#f8e947; ">&gt;</span>
+              <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">span</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"navbar-toggler-icon"</span><span style="color:#f8e947; ">&gt;</span><span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">span</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">button</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"collapse navbar-collapse"</span> id<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"navbarResponsive"</span><span style="color:#f8e947; ">&gt;</span>
+              <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">ul</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"navbar-nav ml-auto"</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">li</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"nav-item padding_30_left"</span><span style="color:#f8e947; ">&gt;</span>
+                  <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"nav-link js-scroll-trigger"</span> href<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"#works"</span><span style="color:#f8e947; ">&gt;</span>
+                    Works
+                  <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">li</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">li</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"nav-item  padding_30_left"</span><span style="color:#f8e947; ">&gt;</span>
+                  <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"nav-link js-scroll-trigger"</span> href<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"#bio"</span><span style="color:#f8e947; ">&gt;</span>
+                    Bio
+                  <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">li</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">li</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"nav-item  padding_30_left"</span><span style="color:#f8e947; ">&gt;</span>
+                  <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"nav-link js-scroll-trigger"</span> href<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"blog.html"</span><span style="color:#f8e947; ">&gt;</span>
+                    Blog
+                  <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">li</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">li</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"nav-item padding_30_left"</span><span style="color:#f8e947; ">&gt;</span>
+                  <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"nav-link js-scroll-trigger"</span> href<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"shop.html"</span><span style="color:#f8e947; ">&gt;</span>
+                    Shop
+                  <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">li</span><span style="color:#f8e947; ">&gt;</span>         
+                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">li</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"nav-item padding_30_left"</span><span style="color:#f8e947; ">&gt;</span>
+                  <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"nav-link js-scroll-trigger no-padding-right"</span> onclick<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"toggleTheme()"</span><span style="color:#f8e947; ">&gt;</span>
+                  ◐
+                  <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">li</span><span style="color:#f8e947; ">&gt;</span>
+              <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">ul</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+          <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">nav</span><span style="color:#f8e947; ">&gt;</span>
+    <span style="color:#9999a9; ">&lt;!-- Navigation --&gt;</span>
+      </pre>
+                            
+    </code>
+
+                        <h3 class=" text-color padtop_60">
+                            Primary Button:
+                        </h3>
+                        <div class="pb-2">
+                            <button class="primary-btn"> Primary Button
+                            </button>
+                        </div>
+                        <code>
+
+    <pre class="rounded bg-pale-night" style="color:#FFFFFF;">  
+    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> href<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"#"</span> target<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"_blank"</span><span style="color:#f8e947; ">&gt;</span>
+         <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">button</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"primary-btn"</span><span style="color:#f8e947; ">&gt;</span>Buy Now<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">button</span><span style="color:#f8e947; ">&gt;</span>
+    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+
+</pre>
+                                                    
+            </code>
+                        <h3 class=" text-color padtop_60">
+                            Secondary Button:
+                        </h3>
+                        <div class="pb-2">
+                            <button class="secondary-btn"> Secondary Button
+                            </button>
+                        </div>
+                        <code>
+<pre class="rounded bg-pale-night" style="color:#FFFFFF;"> 
+    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> href<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"#"</span> target<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"_blank"</span><span style="color:#f8e947; ">&gt;</span>
+        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">button</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"secondary-btn"</span><span style="color:#f8e947; ">&gt;</span>Buy Now<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">button</span><span style="color:#f8e947; ">&gt;</span>
+    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+    
+</pre>
+                            
+                            </code>
+                        <h3 class="text-color padtop_60">
+                            Tertiary Button:
+                        </h3>
+                        <div class="pb-2">
+                            <button class="tertiary-btn"> Tertiary Button
+                            </button>
+                        </div>
+                        <code>
+<pre class="rounded bg-pale-night" style="color:#FFFFFF;"> 
+    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> href<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"#"</span> target<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"_blank"</span><span style="color:#f8e947; ">&gt;</span>
+        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">button</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"tertiary-btn"</span><span style="color:#f8e947; ">&gt;</span>Buy Now<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">button</span><span style="color:#f8e947; ">&gt;</span>
+    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+
+</pre>
+                                
+                                </code>
+                        <h3 class=" text-color padtop_60">
+                            Pagination:
+                        </h3>
+                        <div class="pt-2">
+                            <nav aria-label="Page navigation example" class="dark">
+                                <ul class="pagination justify-content-left">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <code>
+
+<pre class="rounded bg-pale-night" style="color:#FFFFFF;">
+
+    <span style="color:#9999a9; ">&lt;!--- pagination --&gt;</span>
+        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"container padbot_60 padtop_60"</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"row"</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"col d-flex justify-content-end"</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">nav</span> aria-label<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"Pagination"</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"dark"</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">ul</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"pagination"</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">li</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">" page-item disabled"</span><span style="color:#f8e947; ">&gt;</span><span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"page-link"</span> href<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"#"</span> tabindex<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"-1"</span><span style="color:#f8e947; ">&gt;</span>Previous<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span><span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">li</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">li</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"page-item active"</span><span style="color:#f8e947; ">&gt;</span><span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"page-link"</span> href<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"#"</span><span style="color:#f8e947; ">&gt;</span><span style="color:#00a800; ">1</span><span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span><span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">li</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">li</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"page-item"</span><span style="color:#f8e947; ">&gt;</span><span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"page-link"</span> href<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"#"</span><span style="color:#f8e947; ">&gt;</span><span style="color:#00a800; ">2</span><span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span><span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">li</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">li</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"page-item"</span><span style="color:#f8e947; ">&gt;</span><span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"page-link"</span> href<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"#"</span><span style="color:#f8e947; ">&gt;</span><span style="color:#00a800; ">3</span><span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span><span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">li</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">li</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"page-item"</span><span style="color:#f8e947; ">&gt;</span><span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"page-link"</span> href<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"#"</span><span style="color:#f8e947; ">&gt;</span>Next<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span><span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">li</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">ul</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">nav</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+    <span style="color:#9999a9; ">&lt;!--- pagination --&gt;</span>
+
+</pre>
+                                              
+</code>
+
+
+                        <h3 class=" text-color pb-3 padtop_60">
+                            Card -with carousel- for shop page:
+                        </h3>
+                        <!-- Card -with carousel- for shop -->
+                        <div class="col-12 col-lg-6 px-0">
+                            <div class="" data-aos="fade-up" data-aos-delay="400">
+                                <div class="card-no-hover">
+                                    <div id="item-1" class="carousel slide" data-ride="carousel" data-interval="false">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img class="d-block w-100 "
+                                                    src="https://via.placeholder.com/540/505050/FFFFFF/?text=1_Img_540x540"
+                                                    alt="First slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 "
+                                                    src="https://via.placeholder.com/540/505050/FFFFFF/?text=2_Img_540x540"
+                                                    alt="Second slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 "
+                                                    src="https://via.placeholder.com/540/505050/FFFFFF/?text=3_Img_540x540"
+                                                    alt="Third slide">
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#item-1" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#item-1" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <h3 class="text-color-x">Hat with teeth</h3>
+                                        <div class="product_price">
+                                            <span class="price text-color-x">$45.00</span>
+                                        </div>
+                                        <p class="text-color-x">Hand-painted with acrylic..</p>
+                                        <a href="#" target="_blank">
+                                            <button class="primary-btn-exception">Buy Now
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -with carousel- for shop -->
+                        <code>
+
+
+<pre class="rounded bg-pale-night" style="color:#FFFFFF;">
+
+    <span style="color:#9999a9; ">&lt;!-- Card -with carousel- for shop --&gt;</span>
+        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"col-12 col-lg-6 px-0"</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">""</span> data-aos<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"fade-up"</span> data-aos-delay<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"400"</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"card-no-hover"</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> id<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"item-1"</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"carousel slide"</span> data-ride<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"carousel"</span> data-interval<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"false"</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"carousel-inner"</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"carousel-item active"</span><span style="color:#f8e947; ">&gt;</span>
+                                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">img</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"d-block w-100 "</span>
+                                    src<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"https://via.placeholder.com/540/505050/FFFFFF/?text=1_Img_540x540"</span>
+                                    alt<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"First slide"</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"carousel-item"</span><span style="color:#f8e947; ">&gt;</span>
+                                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">img</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"d-block w-100 "</span>
+                                    src<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"https://via.placeholder.com/540/505050/FFFFFF/?text=2_Img_540x540"</span>
+                                    alt<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"Second slide"</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"carousel-item"</span><span style="color:#f8e947; ">&gt;</span>
+                                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">img</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"d-block w-100 "</span>
+                                    src<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"https://via.placeholder.com/540/505050/FFFFFF/?text=3_Img_540x540"</span>
+                                    alt<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"Third slide"</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"carousel-control-prev"</span> href<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"#item-1"</span> role<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"button"</span> data-slide<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"prev"</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">span</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"carousel-control-prev-icon"</span> aria-hidden<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"true"</span><span style="color:#f8e947; ">&gt;</span><span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">span</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">span</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"sr-only"</span><span style="color:#f8e947; ">&gt;</span>Previous<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">span</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"carousel-control-next"</span> href<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"#item-1"</span> role<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"button"</span> data-slide<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"next"</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">span</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"carousel-control-next-icon"</span> aria-hidden<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"true"</span><span style="color:#f8e947; ">&gt;</span><span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">span</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">span</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"sr-only"</span><span style="color:#f8e947; ">&gt;</span>Next<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">span</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"card-body"</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">h3</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"text-color-x"</span><span style="color:#f8e947; ">&gt;</span>Hat with teeth<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">h3</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"product_price"</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">span</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"price text-color-x"</span><span style="color:#f8e947; ">&gt;</span>$<span style="color:#00a800; ">45.00</span><span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">span</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">p</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"text-color-x"</span><span style="color:#f8e947; ">&gt;</span>Hand-painted with acrylic<span style="color:#00a800; ">..</span><span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">p</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> href<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"#"</span> target<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"_blank"</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">button</span> class<span style="color:#FFFFFF; ">=</span><span style="color:#26e482; ">"primary-btn-exception"</span><span style="color:#f8e947; ">&gt;</span>Buy Now
+                            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">button</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+    <span style="color:#9999a9; ">&lt;!-- Card -with carousel- for shop --&gt;</span>
+    </pre>
+        
+                            
+</code>
+
+
+
+
+                        <h3 class=" text-color pb-3 padtop_60">
+                            Blog Post Preview:
+                        </h3>
+                        <!-- Blog Post Preview -->
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <a href="#">
+                                            <img class="img-fluid pb-3"
+                                                src="https://via.placeholder.com/750x300/505050/FFFFFF/?text=750x300"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="#" target="_blank" class="text-color-x">
+                                            <h2 class="text-color-x no-underline">Post Sample</h2>
+                                        </a>
+                                        <p class="text-color-x">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit.
+                                            Reiciendis
+                                            aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita
+                                            corporis
+                                            animi vero voluptate voluptatibus possimus, veniam magni...</p>
+                                        <a href="#" target="_blank">
+                                            <button class="primary-btn-exception">Read More &rarr;
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="text-muted">
+                                    <p class="m-0 text-color-x pt-2">Posted on January 1, 2017</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Blog Post Preview -->
+                        <code>
+<pre class="rounded bg-pale-night" style="color:#FFFFFF;">
+
+    <span style="color:#9999a9; ">&lt;!-- Blog Post Preview --&gt;</span>
+        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"card mb-4"</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"card-body"</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"row"</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"col-lg-6"</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> href<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"#"</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">img</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"img-fluid pb-3"</span>
+                                src<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"https://via.placeholder.com/750x300/505050/FFFFFF/?text=750x300"</span>
+                                alt<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">""</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"col-lg-6"</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> href<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"#"</span> target<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"_blank"</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"text-color-x"</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">h2</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"text-color-x no-underline"</span><span style="color:#f8e947; ">&gt;</span>Post Sample<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">h2</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">p</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"text-color-x"</span><span style="color:#f8e947; ">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit<span style="color:#00a800; ">.</span>
+                            Reiciendis
+                            aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam<span style="color:#00a800; ">.</span> Dicta expedita
+                            corporis
+                            animi vero voluptate voluptatibus possimus, veniam magni<span style="color:#00a800; ">...</span><span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">p</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> href<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"#"</span> target<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"_blank"</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">button</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"primary-btn-exception"</span><span style="color:#f8e947; ">&gt;</span>Read More &amp;rarr;
+                            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">button</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"text-muted"</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">p</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"m-0 text-color-x pt-2"</span><span style="color:#f8e947; ">&gt;</span>Posted on January <span style="color:#00a800; ">1</span>, <span style="color:#00a800; ">2017</span><span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">p</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+    <span style="color:#9999a9; ">&lt;!-- Blog Post Preview --&gt;</span>
+        </pre>
+
+        
+</code>
+                        <h3 class=" text-color padtop_60">
+                            Tabs:
+                        </h3>
+                        <!-- Tabs Container-->
+                        <div class="row padbot_60">
+                            <!-- Tabs Content -->
+                            <div class="col-lg-12">
+                                <ul class="nav nav-pills padtop_15" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active p-3" id="pills-home-tab" data-toggle="pill"
+                                            href="#pills-tab-one" role="tab" aria-controls="pills-home"
+                                            aria-selected="true">Tab One</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link p-3" id="pills-profile-tab" data-toggle="pill"
+                                            href="#pills-tab-two" role="tab" aria-controls="pills-profile"
+                                            aria-selected="false">Tab Two</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link p-3" id="pills-contact-tab" data-toggle="pill"
+                                            href="#pills-tab-three" role="tab" aria-controls="pills-contact"
+                                            aria-selected="false">Tab Three</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Tabs Content -->
+                            <!-- Tabs Content -->
+                            <div class="container">
+                                <div class="row pt-4">
+                                    <div class="col-lg-12 col-sm-12">
+                                        <div class="tab-content" id="pills-tabContent">
+                                            <div class="tab-pane fade show active" id="pills-tab-one" role="tabpanel"
+                                                aria-labelledby="pills-home-tab">
+                                                <h1 class="text-color padbot_30">One</h1>
+                                                <p class="text-color">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                    elit,
+                                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                    Ullamcorper morbi
+                                                    tincidunt ornare massa eget egestas purus viverra. Sit amet purus
+                                                    gravida quis blandit
+                                                    turpis cursus in hac. Quis commodo odio aenean sed adipiscing diam.
+                                                    Tincidunt tortor
+                                                    aliquam</p>
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-tab-two" role="tabpanel"
+                                                aria-labelledby="pills-profile-tab">
+                                                <h1 class="text-color padbot_30">Two</h1>
+                                                <p class="text-color">Lorem ipsum dolor sit amet</p>
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-tab-three" role="tabpanel"
+                                                aria-labelledby="pills-contact-tab">
+                                                <h1 class="text-color padbot_30">Three</h1>
+                                                <p class="text-color">Lorem ipsum dolor sit amet</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tabs Content -->
+                        </div>
+                        <!-- Tabs Container -->
+                        <code class="padtop-60">
+
+    <pre class="rounded bg-pale-night" style="color:#FFFFFF;">
+
+    <span style="color:#9999a9; ">&lt;!-- Tabs Container--&gt;</span>
+        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"row padtop_60 padbot_60"</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#9999a9; ">&lt;!-- Tabs Content --&gt;</span>
+            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"col-lg-12"</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">ul</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"nav nav-pills padtop_15"</span> id<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"pills-tab"</span> role<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"tablist"</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">li</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"nav-item"</span> role<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"presentation"</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"nav-link active p-3"</span> id<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"pills-home-tab"</span> data-toggle<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"pill"</span>
+                            href<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"#pills-tab-one"</span> role<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"tab"</span> aria-controls<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"pills-home"</span>
+                            aria-selected<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"true"</span><span style="color:#f8e947; ">&gt;</span>Tab One<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">li</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">li</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"nav-item"</span> role<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"presentation"</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"nav-link p-3"</span> id<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"pills-profile-tab"</span> data-toggle<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"pill"</span>
+                            href<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"#pills-tab-two"</span> role<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"tab"</span> aria-controls<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"pills-profile"</span>
+                            aria-selected<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"false"</span><span style="color:#f8e947; ">&gt;</span>Tab Two<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">li</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">li</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"nav-item"</span> role<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"presentation"</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"nav-link p-3"</span> id<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"pills-contact-tab"</span> data-toggle<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"pill"</span>
+                            href<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"#pills-tab-three"</span> role<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"tab"</span> aria-controls<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"pills-contact"</span>
+                            aria-selected<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"false"</span><span style="color:#f8e947; ">&gt;</span>Tab Three<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">li</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">ul</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#9999a9; ">&lt;!-- Tabs Content --&gt;</span>
+            <span style="color:#9999a9; ">&lt;!-- Tabs Content --&gt;</span>
+            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"container p-0"</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"row p-0 pt-3"</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"col-lg-12 col-sm-12"</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"tab-content"</span> id<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"pills-tabContent"</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"tab-pane fade show active"</span> id<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"pills-tab-one"</span> role<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"tabpanel"</span>
+                                aria-labelledby<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"pills-home-tab"</span><span style="color:#f8e947; ">&gt;</span>
+                                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">h1</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"text-color padbot_30"</span><span style="color:#f8e947; ">&gt;</span>One<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">h1</span><span style="color:#f8e947; ">&gt;</span>
+                                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">p</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"text-color"</span><span style="color:#f8e947; ">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua<span style="color:#00a800; ">.</span>
+                                    Ullamcorper morbi
+                                    tincidunt ornare massa eget egestas purus viverra<span style="color:#00a800; ">.</span> Sit amet purus
+                                    gravida quis blandit
+                                    turpis cursus in hac<span style="color:#00a800; ">.</span> Quis commodo odio aenean sed adipiscing diam<span style="color:#00a800; ">.</span>
+                                    Tincidunt tortor
+                                    aliquam<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">p</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"tab-pane fade"</span> id<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"pills-tab-two"</span> role<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"tabpanel"</span>
+                                aria-labelledby<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"pills-profile-tab"</span><span style="color:#f8e947; ">&gt;</span>
+                                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">h1</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"text-color padbot_30"</span><span style="color:#f8e947; ">&gt;</span>Two<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">h1</span><span style="color:#f8e947; ">&gt;</span>
+                                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">p</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"text-color"</span><span style="color:#f8e947; ">&gt;</span>Lorem ipsum dolor sit amet<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">p</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"tab-pane fade"</span> id<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"pills-tab-three"</span> role<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"tabpanel"</span>
+                                aria-labelledby<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"pills-contact-tab"</span><span style="color:#f8e947; ">&gt;</span>
+                                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">h1</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"text-color padbot_30"</span><span style="color:#f8e947; ">&gt;</span>Three<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">h1</span><span style="color:#f8e947; ">&gt;</span>
+                                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">p</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"text-color"</span><span style="color:#f8e947; ">&gt;</span>Lorem ipsum dolor sit amet<span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">p</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#9999a9; ">&lt;!-- Tabs Content --&gt;</span>
+        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+        <span style="color:#9999a9; ">&lt;!-- Tabs Container --&gt;</span>
+    </pre>
+
+</code>
+
+                        <h3 class=" text-color padtop_60">
+                            Masonry Layout Gallery with modal & carousel on click:
+                        </h3>
+                        <!-- ======= Masonry Layout Gallery ======= -->
+                        <div class="row">
+                            <!-- ======= Images ======= -->
+                            <div class="col masonry">
+                                <div class="item">
+                                    <a href="#lightbox" data-toggle="modal" data-slide-to="0">
+                                        <img src="https://via.placeholder.com/543x612/505050/FFFFFF/?text=IMG_543x612"
+                                            class="w-100 pt-4">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#lightbox" data-toggle="modal" data-slide-to="1">
+                                        <img src="https://via.placeholder.com/543x543/505050/FFFFFF/?text=IMG_543x543"
+                                            class="w-100 pt-4">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#lightbox" data-toggle="modal" data-slide-to="2">
+                                        <img src="https://via.placeholder.com/543x700/505050/FFFFFF/?text=IMG_543x700"
+                                            class="w-100 pt-4">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#lightbox" data-toggle="modal" data-slide-to="3">
+                                        <img src="https://via.placeholder.com/543x900/505050/FFFFFF/?text=IMG_543x900"
+                                            class="w-100 pt-4">
+                                    </a>
+                                </div>
+
+                                <div class="item">
+                                    <a href="#lightbox" data-toggle="modal" data-slide-to="4">
+                                        <img src="https://via.placeholder.com/543x700/505050/FFFFFF/?text=IMG_543x700"
+                                            class="w-100 pt-4">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#lightbox" data-toggle="modal" data-slide-to="5">
+                                        <img src="https://via.placeholder.com/543x543/505050/FFFFFF/?text=IMG_543x543"
+                                            class="w-100 pt-4">
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- ======= Images ======= -->
+                            <!-- ======= Lightbox ======= -->
+                            <div id="lightbox" class="modal fade" role="dialog">
+                                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <div class="carousel slide" data-ride="carousel" data-interval="false"
+                                                tabindex="-1" id="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active" data-slide-to="0">
+                                                        <img class="d-block w-100"
+                                                            src="https://via.placeholder.com/543x612/505050/FFFFFF/?text=IMG_543x612">
+                                                    </div>
+                                                    <div class="carousel-item" data-slide-to="1">
+                                                        <img class="d-block w-100"
+                                                            src="https://via.placeholder.com/543x543/505050/FFFFFF/?text=IMG_543x543">
+                                                    </div>
+                                                    <div class=" carousel-item" data-slide-to="2">
+                                                        <img class="d-block w-100"
+                                                            src="https://via.placeholder.com/543x700/505050/FFFFFF/?text=IMG_543x700">
+                                                    </div>
+                                                    <div class=" carousel-item" data-slide-to="3">
+                                                        <img class="d-block w-100"
+                                                            src="https://via.placeholder.com/543x900/505050/FFFFFF/?text=IMG_543x900">
+                                                    </div>
+                                                    <div class=" carousel-item" data-slide-to="4">
+                                                        <img class="d-block w-100"
+                                                            src="https://via.placeholder.com/543x700/505050/FFFFFF/?text=IMG_543x700">
+                                                    </div>
+
+                                                    <div class=" carousel-item" data-slide-to="5">
+                                                        <img class="d-block w-100"
+                                                            src="https://via.placeholder.com/543x543/505050/FFFFFF/?text=IMG_543x543">
+                                                    </div>
+                                                </div>
+                                                <a class="carousel-control-prev" href="#carousel" role="button"
+                                                    data-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#carousel" role="button"
+                                                    data-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ======= Lightbox ======= -->
+                        </div>
+                        <!-- ======= Masonry Layout Gallery ======= -->
+                    </div>
+                    <code>
+
+<pre class="rounded bg-pale-night" style="color:#FFFFFF;">
+    
+    <span style="color:#9999a9; ">&lt;!-- ======= Masonry Layout Gallery With Modal/Carousel ======= --&gt;</span>
+        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"container pb-4"</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#9999a9; ">&lt;!-- Images --&gt;</span>
+            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"row"</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"col masonry"</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"item"</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> href<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"#lightbox"</span> data-toggle<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"modal"</span> data-slide-to<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"0"</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">img</span> src<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"https://via.placeholder.com/543x612/505050/FFFFFF/?text=1_IMG_543x612"</span>
+                                class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"w-100 pt-4"</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+
+                    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"itme"</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> href<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"#lightbox"</span> data-toggle<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"modal"</span> data-slide-to<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"1"</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">img</span> src<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"https://via.placeholder.com/543x543/505050/FFFFFF/?text=2_IMG_543x543"</span>
+                                class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"w-100 pt-4"</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+
+                    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"itme"</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> href<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"#lightbox"</span> data-toggle<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"modal"</span> data-slide-to<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"2"</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">img</span> src<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"https://via.placeholder.com/543x700/505050/FFFFFF/?text=3_IMG_543x700"</span>
+                                class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"w-100 pt-4"</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"itme"</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> href<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"#lightbox"</span> data-toggle<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"modal"</span> data-slide-to<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"3"</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">img</span> src<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"https://via.placeholder.com/543x400/505050/FFFFFF/?text=3_IMG_543x400"</span>
+                                class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"w-100 pt-4"</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+
+                    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#9999a9; ">&lt;!--Images--&gt;</span>
+            <span style="color:#9999a9; ">&lt;!-- Lightbox --&gt;</span>
+            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> id<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"lightbox"</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"modal fade"</span> role<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"dialog"</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"modal-dialog modal-lg modal-dialog-centered"</span> role<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"document"</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"modal-content"</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"modal-body"</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"carousel slide"</span> data-ride<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"carousel"</span> data-interval<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"false"</span>
+                                tabindex<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"-1"</span> id<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"carousel"</span><span style="color:#f8e947; ">&gt;</span>
+                                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"carousel-inner"</span><span style="color:#f8e947; ">&gt;</span>
+                                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"carousel-item active"</span> data-slide-to<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"0"</span><span style="color:#f8e947; ">&gt;</span>
+                                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">img</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"d-block w-100"</span>
+                                            src<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"https://via.placeholder.com/543x612/505050/FFFFFF/?text=1_IMG_543x612"</span><span style="color:#f8e947; ">&gt;</span>
+                                    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"carousel-item"</span> data-slide-to<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"1"</span><span style="color:#f8e947; ">&gt;</span>
+                                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">img</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"d-block w-100"</span>
+                                            src<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"https://via.placeholder.com/543x543/505050/FFFFFF/?text=2_IMG_543x543"</span><span style="color:#f8e947; ">&gt;</span>
+                                    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">" carousel-item"</span> data-slide-to<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"2"</span><span style="color:#f8e947; ">&gt;</span>
+                                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">img</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"d-block w-100"</span>
+                                            src<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"https://via.placeholder.com/543x700/505050/FFFFFF/?text=3_IMG_543x700"</span><span style="color:#f8e947; ">&gt;</span>
+                                    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">div</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">" carousel-item"</span> data-slide-to<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"3"</span><span style="color:#f8e947; ">&gt;</span>
+                                        <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">img</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"d-block w-100"</span>
+                                            src<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"https://via.placeholder.com/543x400/505050/FFFFFF/?text=3_IMG_543x400"</span><span style="color:#f8e947; ">&gt;</span>
+                                    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                                <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"carousel-control-prev"</span> href<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"#carousel"</span> role<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"button"</span>
+                                    data-slide<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"prev"</span><span style="color:#f8e947; ">&gt;</span>
+                                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">span</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"carousel-control-prev-icon"</span> aria-hidden<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"true"</span><span style="color:#f8e947; ">&gt;</span><span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">span</span><span style="color:#f8e947; ">&gt;</span>
+                                <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+                                <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">a</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"carousel-control-next"</span> href<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"#carousel"</span> role<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"button"</span>
+                                    data-slide<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"next"</span><span style="color:#f8e947; ">&gt;</span>
+                                    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">span</span> class<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"carousel-control-next-icon"</span> aria-hidden<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"true"</span><span style="color:#f8e947; ">&gt;</span><span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">span</span><span style="color:#f8e947; ">&gt;</span>
+                                <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">a</span><span style="color:#f8e947; ">&gt;</span>
+                            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                    <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+                <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+            <span style="color:#9999a9; ">&lt;!-- Lightbox --&gt;</span>
+        <span style="color:#f8e947; ">&lt;/</span><span style="color:#AB8ECF; font-weight:bold; ">div</span><span style="color:#f8e947; ">&gt;</span>
+    <span style="color:#9999a9; ">&lt;!-- ======= Masonry Layout Gallery With Modal/Carousel ======= --&gt;</span>
+
+</pre>
+        
+                        </code>
+                </div>
+            </div>
+            <!-- Dark -->
+
+        </div>
+    </div>
+    </div>
+
+    <!-- ==== Main Content - End ==== -->
+
+    <!-- Footer -->
+    <footer class="px-5 bg-color py-2">
+        <div class="container padtop_30">
+            <div class="row">
+                <div class="col-lg-12 padding_30">
+                    <p class="copyright text-center text-color"> ☺ Toucan</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End-->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+
+    <!-- Custom JavaScript for toggling themes -->
+    <script>
+        // function to set a given theme/color-scheme
+        function setTheme(themeName) {
+            localStorage.setItem('theme', themeName);
+            document.documentElement.className = themeName;
+        }
+
+        // function to toggle between light and dark theme
+        function toggleTheme() {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-light');
+            } else {
+                setTheme('theme-dark');
+            }
+        }
+
+        // Immediately invoked function to set the theme on initial load
+        (function () {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-dark');
+            } else {
+                setTheme('theme-light');
+            }
+        })();
+    </script>
+
+</body>
+
+</html>
