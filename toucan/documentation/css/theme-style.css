@@ -35,7 +35,7 @@
   --color-tertiary: #232325;
   --font-color: #232325;
   --links-color: #e60073;
-  --toggle-menu-icon: url("img/icons/menu-light.svg");
+  --toggle-menu-icon: url("/toucan/documentation/img/icons/menu-light.svg");
 }
 .theme-dark {
   --color-primary: #26e482;
@@ -43,7 +43,7 @@
   --color-tertiary: white;
   --font-color: whitesmoke;
   --links-color: #ff5cad;
-  --toggle-menu-icon: url("img/icons/menu-dark.svg");
+  --toggle-menu-icon: url("/toucan/documentation/img/icons/menu-dark.svg");
 }
 
 /* 1. Navigation */
@@ -90,11 +90,11 @@
 /* Left Arrow Icon */
 
 .carousel-control-prev-icon {
-  background-image: url("img/icons/left-chevron.svg");
+  background-image: url("/toucan/documentation/img/icons/left-chevron.svg");
 }
 /* Right Arrow Icon */
 .carousel-control-next-icon {
-  background-image: url("img/icons/right-chevron.svg");
+  background-image: url("/toucan/documentation/img/icons/right-chevron.svg");
 }
 
 .carousel-control-next-icon,
