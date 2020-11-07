@@ -84,7 +84,7 @@
 }
 
 .navbar-toggler:focus {
-  box-shadow: 0 0 0 2px var(--color-tertiary);
+  box-shadow: 0 0 0 2px var(--color-primary);
 }
 
 /* Left Arrow Icon */
