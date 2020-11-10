@@ -173,7 +173,7 @@ a.nav-link:hover {
 .hero-img-1 {
   height: 80vh; /* Change this number to change the height of the image */
   min-height: 500px;
-  background-image: url("../img/works/work-9/pexels-steve-johnson-2784948.jpg"); /* Change the image itself here */
+  background-image: url("/toucan/img/works/work-9/pexels-steve-johnson-2784948.jpg"); /* Change the image itself here */
   background-size: cover;
   background-position-x: center;
   background-position-y: center;

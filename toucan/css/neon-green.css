@@ -30,17 +30,19 @@
 
 ===================== */
 .theme-light {
-  --color-primary: #89ff14;
+  --color-primary: #89fe16;
   --color-secondary: white;
   --color-tertiary: #232325;
   --font-color: #232325;
+  --links-color: #e60073;
   --toggle-menu-icon: url("/toucan/img/icons/menu-light.svg");
 }
 .theme-dark {
-  --color-primary: #89ff14;
+  --color-primary: #89fe16;
   --color-secondary: #232325;
   --color-tertiary: white;
   --font-color: whitesmoke;
+  --links-color: #ff5cad;
   --toggle-menu-icon: url("/toucan/img/icons/menu-dark.svg");
 }
 
@@ -126,16 +128,22 @@
 
 /* 3. Links */
 
-a {
-  color: hotpink;
+code {
+  color: var(--links-color);
 }
+
+a {
+  color: var(--links-color);
+}
+
 a:hover {
-  color: var(--color-secondary);
+  color: var(--color-tertiary);
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .no-underline {
-  text-decoration: none;
+  text-decoration: underline var(--color-tertiary);
 }
 
 .nav-link {
@@ -293,6 +301,9 @@ button.navbar-toggler:focus {
 .text-color-x {
   color: var(--color-secondary);
 }
+.text-color-x:hover {
+  color: var(--color-secondary);
+}
 
 .text-white {
   color: whitesmoke;
@@ -307,6 +318,9 @@ button.navbar-toggler:focus {
 }
 
 /* 7. Background Colors */
+.bg-pale-night {
+  background-color: #303030;
+}
 .bg-pale-night {
   background-color: #303030;
 }

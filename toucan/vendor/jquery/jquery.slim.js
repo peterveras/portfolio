@@ -1957,7 +1957,7 @@ Expr = Sizzle.selectors = {
 
 							// Seek `elem` from a previously-cached index
 
-							// ...in a gzip-Toucanly way
+							// ...in a gzip-friendly way
 							node = parent;
 							outerCache = node[ expando ] || ( node[ expando ] = {} );
 
@@ -1988,7 +1988,7 @@ Expr = Sizzle.selectors = {
 							// Use previously-cached element index if available
 							if ( useCache ) {
 
-								// ...in a gzip-Toucanly way
+								// ...in a gzip-friendly way
 								node = elem;
 								outerCache = node[ expando ] || ( node[ expando ] = {} );
 
