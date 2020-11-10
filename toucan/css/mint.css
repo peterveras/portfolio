@@ -139,6 +139,7 @@ a {
 a:hover {
   color: var(--color-tertiary);
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .no-underline {
