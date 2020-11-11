@@ -27,7 +27,7 @@
 14. Selection Color
 15. Screen Readers
 16. Horizontal Rule
-
+17. Scroolbar 
 ===================== */
 .theme-light {
   --color-primary: #26e482;
@@ -623,8 +623,53 @@ body a::-webkit-selection {
   border: 0;
 }
 
-/* 16. Horizontal Rule */
+/* 16. Horizontal Rule
+17. Scroolbar  */
 
 hr {
   border-top: 0.5px solid var(--color-tertiary);
+}
+
+/* 17. scroolbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-secondary);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-tertiary);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-tertiary);
+}
+
+/* 17. scroolbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-secondary);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-tertiary);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-tertiary);
 }

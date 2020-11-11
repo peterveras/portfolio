@@ -85,7 +85,7 @@
           <p class="text-color">Thanks for purchasing this theme, this is how everything is organized:</p>
           <pre class="bg-pale-night rounded p-2">
                             <code class="text-white flex-wrap">
-    ../toucan-theme
+    ../toucan-template
     |
     |                            
     └── ─→ css &#40;folder with all the CSS files needed for theme&#41;
@@ -105,10 +105,8 @@
     |       |
     |       └── ─→ works &#40;images for work pages&#41;
     |
-    |    
-    ├── ─→ js &#40;Folder with JavaScript files for Bootstrap&#41;
     |   
-    ├── ─→ Vendor &#40;Folder with compiled files of Bootstrap&#41;
+    ├── ─→ Vendor &#40;Folder with compiled files of Bootstrap, jquery, and the JavaScript for smooth scrolling&#41;
     |
     |   ↓↓↓↓ <i>These are the only files you need to worry about</i> ↓↓↓↓
     |
@@ -903,8 +901,8 @@
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Custom JavaScript for this theme -->
-  <script src="js/scrolling-nav.js"></script>
+  <!-- smooth scroll script -->
+  <script src="vendor/scroll/scrolling-nav.js"></script>
 
   <!-- Custom JavaScript for toggling themes -->
   <script>
