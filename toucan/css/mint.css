@@ -623,8 +623,7 @@ body a::-webkit-selection {
   border: 0;
 }
 
-/* 16. Horizontal Rule
-17. Scroolbar  */
+/* 16. Horizontal Rule */
 
 hr {
   border-top: 0.5px solid var(--color-tertiary);
