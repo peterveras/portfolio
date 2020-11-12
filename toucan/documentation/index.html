@@ -10,7 +10,7 @@
 <!-- Title next to favicon -->
 <title>Toucan template documentation</title>
 <!-- Rich Preview When Sharig on Messages, Whatsapp, the internet in general -->
-<meta property="og:title" content="Friend theme Documentation">
+<meta property="og:title" content="Toucan templateDocumentation">
 <meta property="og:image" content="img/icons/preview-img.png">
 <!-- Bootstrap core CSS -->
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -61,7 +61,7 @@
           </li>
           <li class="nav-item padding_30_left">
             <a class="nav-link js-scroll-trigger" href="/toucan/index.html">
-              Theme Preview
+              Live Preview
             </a>
           </li>
           <li class="nav-item padding_30_left">
@@ -82,17 +82,31 @@
         <!-- Overview -->
         <div id="overview" class="padtop_90">
           <h1 class="text-color padbot_30">Overview</h1>
-          <p class="text-color">Thanks for purchasing this theme, this is how everything is organized:</p>
+          <p class="text-color">Thanks for purchasing this template, this is how everything is organized:</p>
           <pre class="bg-pale-night rounded p-2">
                             <code class="text-white flex-wrap">
-    ./mint &#40;or any color you chose&#41;
+    toucan
     |
     |                            
-    └── ─→ css &#40;folder with all the CSS files needed for theme&#41;
+    └── ─→ css &#40;folder with all the CSS files needed for this template&#41;
+    |       |
+    |       ├──  ─→ blue.css &#40;alternative color&#41;
+    |       |
+    |       ├──  ─→ mint.css &#40;this is the default css stylesheet which, among other things, declares the highlight color&#41;
+    |       |
+    |       ├──  ─→ neon-green.css &#40alternative color&#41;
+    |       |
+    |       ├──  ─→ orange.css &#40;alternative color&#41;
+    |       |
+    |       ├──  ─→ pink.css &#40;alternative color&#41;
+    |       |
+    |       ├──  ─→ purple.css &#40;alternative color&#41;
+    |       |
+    |       ├──  ─→ turquoise.css &#40;alternative color&#41;
+    |       |
+    |       ├──  ─→ yellow.css &#40;alternative color&#41;
     |       |
     |       ├── ─→ spacing.css &#40;custome paddding and marging&#41;
-    |       |
-    |       └── ─→ theme-style.css &#40;property for background colors, tabs, links, buttons, cards, etc.&#41;
     |       |
     |       └── ─→ typography.css &#40;declarations for selectors like h1, h2, h3, p, a, etc.&#41;
     |       
@@ -128,16 +142,37 @@
         <div id="colors" class="padtop_30">
           <hr>
           <h1 class="text-color padbot_30">Colors</h1>
-          <p class="text-color">This template comes with 8 different color choices. However, if none
-            of those float your boat; changing the highlight color to any other color is pretty simple.
-          </p>
+          <p class="text-color">This template comes with 8 different color choices. You may have noticed that the
+            stylesheet &quot;mint.css&quot; is declaring the highlight color.
           <div class="bg-pale-night">
             <img class="d-block w-100 padtop_60  p-3" src="img/documentation/Colors.png" alt="purple">
-
           </div>
-          <p class="text-color top_30">
-            1. go to the <code>theme-style.css</code> file and find the hex number
-            of the highlight color in lines 31 and 38. In this example, below, the highlight color is
+          <p class="text-color top_30">To change that highlight color to any of
+            the other alternative colors go to line 18, on all of your html pages, and change the stylesheet for mint
+            &#40;mint.css&#41; to any of the other
+            stylesheets in the folder named &quot;css.&quot; That line of code will look like this:</p>
+          <pre class="bg-pale-night rounded" style="color:#FFFFFF;">
+
+    <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">link</span> href<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"css/mint.css"</span> rel<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"stylesheet"</span><span style="color:#f8e947; ">&gt;</span>
+
+</pre>
+
+          <p class="text-color">For example, if you want to change it to the color yellow, it should look like this:</p>
+
+          <pre class="bg-pale-night rounded" style="color:#FFFFFF;">
+
+  <span style="color:#f8e947; ">&lt;</span><span style="color:#AB8ECF; font-weight:bold; ">link</span> href<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"css/yellow.css"</span> rel<span style="color:#f8e947; ">=</span><span style="color:#26e482; ">"stylesheet"</span><span style="color:#f8e947; ">&gt;</span>
+
+</pre>
+
+          <p class="text-color">Now, if none of those float your boat; changing the highlight color to any other color
+            is pretty simple. Just follow these two steps:
+          </p>
+
+          <p class="text-color">
+            1. go to the <code>mint.css</code> file &#40;or the stylesheet you are using currently to set your highlight
+            color&#41; and find the hex number
+            of the highlight color in lines 33 and 41. In this example, below, the highlight color is
             &#35;26E482 &#40;Mint&#41;. We will change it to &#35;FEE200 &#40;yellow&#41</p>
 
           <p class="text-color pt-2">
@@ -150,7 +185,7 @@
           <h2 class="text-color padtop_30">Text on Navbar</h2>
           <p class="text-color">
             &#40;Optional&#41; change the color of the text sitting over the highlight color on the
-            navbar, for example in the case of this page would be the word "Documentation" in your template
+            navbar, for example in the case of this page, it would be the word "Documentation" in your case
             it should say "Toucan"</p>
           <ul class="text-color">
             <li>
@@ -180,9 +215,9 @@
             </li>
             <li>
               <p>
-                If you want that text to be of a color other than white, go to the
-                <code>theme-style.css</code> file
-                and find in line 51 the class <code>.tex-nav</code>, change there the color to any hex
+                If you want that text to be of a color other than white, go to the <code>mint.css</code> file &#40;or
+                the stylesheet you are using currently to set your highlight
+                color&#41; and find in line 53 the class <code>.tex-nav</code>, change there the color to any hex
                 color you want.
               </p>
             </li>
@@ -241,12 +276,12 @@
         </div>
         <!-- Google Fonts -->
 
-        <!-- Dark -->
+        <!-- Components  -->
         <div id="components" class="bg-color padtop_30 ">
           <div class="pb-4">
             <hr>
             <h1 class="text-color padbot_30">Components</h1>
-            <p class="text-color">These are all the components that come with this theme</p>
+            <p class="text-color">These are all the components that come with this template</p>
             <h3 class="text-color top_30">
               Navbar:
             </h3>
@@ -770,7 +805,7 @@
                           </div>
 
                           <div class=" carousel-item" data-slide-to="5">
-                            <img class="d-block w-100"
+                            <img class="d-block w-100" \
                               src="https://via.placeholder.com/543x543/505050/FFFFFF/?text=IMG_543x543">
                           </div>
                         </div>
