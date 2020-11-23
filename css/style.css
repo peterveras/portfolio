@@ -574,8 +574,7 @@ section {
   width: 100%;
 }
 .navmenu > li > a:hover {
-  opacity: 0.5;
-  font-size: 40px;
+  opacity: 0.8;
   transition: all 500ms ease;
 }
 
