@@ -260,13 +260,12 @@
     </section>
 
     <!-- footer -->
-    <section id="contact" data-midnight="dark" class="dark-bg">
-      <div class="container project-detail wow padtop_30">
+    <footer id="contact" data-midnight="dark" class="dark-bg padding_90">
+      <div class="container project-detail padtop_15">
         <div class="row lightbox-gallery">
           <div class="col-lg-4">
-            <h2 class="white-text subtitle bottom_30">Contac Info.</h2>
+            <h2 class="white-text subtitle bottom_30">Contac Information</h2>
           </div>
-
           <div class="col-lg-2 bottom_30">
             <a href="mailto:peter_veras@live.com?Subject=Hello" target="_blank">peter_veras@live.com</a>
           </div>
@@ -274,21 +273,22 @@
             <a href="tel:+1571-295-1415">+1 571 295 1415</a>
           </div>
           <div class="col-lg-2 bottom_30">
-            <a href="https://www.pinterest.com/peterveras/"><i class="fab fa-pinterest" aria-hidden="true"></i> </a>
+            <a href="https://www.linkedin.com/in/peterveras/"><i class="fab fa-linkedin" aria-hidden="true"></i> </a>
             &nbsp; &nbsp;&nbsp; &nbsp;<a href="https://www.behance.net/peterveras"><i class="fab fa-behance"
                 aria-hidden="true"></i> </a>
-            &nbsp; &nbsp;&nbsp; &nbsp;<a href="https://dribbble.com/PeterVeras"><i class="fab fa-dribbble"
+            &nbsp; &nbsp;&nbsp; &nbsp;<a href="https://www.pinterest.com/peterveras/"><i class="fab fa-pinterest"
                 aria-hidden="true"></i> </a>
             &nbsp; &nbsp;&nbsp; &nbsp;<a href="https://www.instagram.com/peter_verastegui/"><i class="fab fa-instagram"
                 aria-hidden="true"></i> </a>
           </div>
           <div class="col-lg-2 bottom_30">
-            <p class="copyright">© Peter Verastegui</p>
+            <p class="white-text">
+              &copy;&nbsp;<span id="copyYear"></span>&nbsp;Peter Verastegui</p>
           </div>
         </div>
       </div>
       </div>
-    </section>
+    </footer>
 
   </main>
 
@@ -297,6 +297,10 @@
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script type="text/javascript">
+    var currentYear = new Date().getFullYear();
+    document.getElementById("copyYear").innerHTML = currentYear;
+  </script>
 
 
 </body>

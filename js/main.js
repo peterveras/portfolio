@@ -646,4 +646,6 @@ $(window).on("load", function () {
     e.target; // newly activated tab
     e.relatedTarget; // previous active tab
   });
-}); // document read end
+});
+
+// document end

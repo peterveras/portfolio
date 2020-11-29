@@ -260,13 +260,12 @@
     <!--- pagination -->
 
     <!-- Footer -->
-    <footer class="bg-color py-2">
+    <footer class="px-5 bg-color py-2">
         <div class="container padtop_30">
             <div class="row">
                 <div class="col-lg-12 padding_30">
-                    <p class="copyright text-center text-color">© Toucan</p>
+                    <p class="copyright text-center text-color">&copy;&nbsp;<span id="copyYear"></span>&nbsp;Toucan</p>
                 </div>
-
             </div>
         </div>
     </footer>
@@ -282,6 +281,12 @@
 
     <!-- smooth scroll script -->
     <script src="vendor/scroll/scrolling-nav.js"></script>
+
+    <!-- Automatically update copyright year script -->
+    <script type="text/javascript">
+        var currentYear = new Date().getFullYear();
+        document.getElementById("copyYear").innerHTML = currentYear;
+    </script>
 
     <!-- Custom JavaScript for toggling themes -->
     <script>

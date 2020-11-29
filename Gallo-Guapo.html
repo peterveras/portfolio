@@ -15,8 +15,8 @@
   <link rel="stylesheet" href="css/style.css">
 
   <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <span src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></span>
+        <span src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></span>
       <![endif]-->
 
   <!-- FAVICON  -->
@@ -233,13 +233,12 @@
     </section>
 
     <!-- footer -->
-    <section id="contact" data-midnight="dark" class="dark-bg">
-      <div class="container project-detail wow padtop_30">
+    <footer id="contact" data-midnight="dark" class="dark-bg padding_90">
+      <div class="container project-detail padtop_15">
         <div class="row lightbox-gallery">
           <div class="col-lg-4">
-            <h2 class="white-text subtitle bottom_30">Contac Info.</h2>
+            <h2 class="white-text subtitle bottom_30">Contac Information</h2>
           </div>
-
           <div class="col-lg-2 bottom_30">
             <a href="mailto:peter_veras@live.com?Subject=Hello" target="_blank">peter_veras@live.com</a>
           </div>
@@ -256,12 +255,13 @@
                 aria-hidden="true"></i> </a>
           </div>
           <div class="col-lg-2 bottom_30">
-            <p class="copyright">© Peter Verastegui</p>
+            <p class="white-text">
+              &copy;&nbsp;<span id="copyYear"></span>&nbsp;Peter Verastegui</p>
           </div>
         </div>
       </div>
       </div>
-    </section>
+    </footer>
 
   </main>
 
@@ -270,8 +270,10 @@
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
-
-
+  <script type="text/javascript">
+    var currentYear = new Date().getFullYear();
+    document.getElementById("copyYear").innerHTML = currentYear;
+  </script>
 
 </body>
 
