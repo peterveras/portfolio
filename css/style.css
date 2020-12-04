@@ -103,10 +103,6 @@ a:active {
   -moz-transition: all ease 0.3s;
 }
 
-.dark-bg p {
-  color: #f2f2f2;
-}
-
 #preloader {
   position: fixed;
   top: 0;
@@ -1146,7 +1142,7 @@ section.dark.galaxy-bg .project-detail .subtitle,
 section.dark.galaxy-bg .project-detail p,
 section.dark.galaxy-bg .next-link .nav-title,
 section.dark.galaxy-bg .next-link .next-title {
-  color: #f2f2f2;
+  color: #afb0b1;
 }
 
 .project-detail .title {
@@ -1910,7 +1906,7 @@ footer .social-icons {
 }
 
 .grey-text {
-  color: #737373;
+  color: #afb0b1;
 }
 
 .no-gutter {
