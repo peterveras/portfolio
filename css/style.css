@@ -1957,6 +1957,17 @@ footer .social-icons {
   max-width: 100%;
 }
 
+.hero-img-4 {
+  height: 100vh; /* Change this number to change the height of the image */
+  min-height: 500px;
+  background-image: url("../img/works/toucan/bootstrap-wave.png"); /* Change the image itself here */
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-color: var(--color-primary);
+  background-repeat: no-repeat;
+}
+
 .white-border {
   border: 1px solid white;
 }
@@ -2012,6 +2023,12 @@ footer .social-icons {
   background-color: black;
 }
 
+.toucan-grey {
+  background-color: #232325;
+}
+.toucan-green {
+  background-color: #3de481;
+}
 .round-corners {
   border-radius: 10px;
 }
