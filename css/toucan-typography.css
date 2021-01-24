@@ -31,6 +31,12 @@
   font-size: 40px;
 }
 
+.display-montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+}
+
 .toucan-p {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
