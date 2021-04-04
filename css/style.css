@@ -516,6 +516,11 @@ section {
   color: #f2f2f2;
 }
 
+.black-bg .site-btn {
+  border: solid 2px #f2f2f2;
+  color: #f2f2f2;
+}
+
 .toucan-grey .site-btn:hover {
   background: #f2f2f2;
   color: #232325;
@@ -525,6 +530,13 @@ section {
 }
 
 .dark-bg .site-btn:hover {
+  background: #f2f2f2;
+  color: #161616;
+  transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+}
+.black-bg .site-btn:hover {
   background: #f2f2f2;
   color: #161616;
   transition: all ease 0.3s;
