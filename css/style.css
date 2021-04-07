@@ -247,7 +247,7 @@ section {
   cursor: url(../img/Eyeglass-cursor.svg), auto;
 }
 .plus-cursor:hover {
-  opacity: 0.3;
+  opacity: 0.9;
 }
 
 .uptotop .midnightHeader.white .arrow {
