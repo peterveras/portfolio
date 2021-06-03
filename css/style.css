@@ -2040,6 +2040,7 @@ footer .social-icons {
 .galaxy-bg-purple {
   background-color: #7000ff;
 }
+
 .galaxy-bg-purple-light {
   background-color: #6300e2;
 }
@@ -2047,6 +2048,18 @@ footer .social-icons {
 .galaxy-bg-purple-shade {
   background-color: #6300e2;
 }
+
+.jerk-project-bg-purple {
+  background-color: #4814a0;
+}
+
+.jerk-project-bg-maroon {
+  background-color: #61162d;
+}
+.jerk-project-bg-pink {
+  background-color: #ff3ca6;
+}
+
 .black-bg {
   background-color: black;
 }

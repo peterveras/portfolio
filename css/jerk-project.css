@@ -1,0 +1,33 @@
+.container-img-for-character {
+  position: relative;
+  width: 50%;
+}
+
+.overlay-img-for-character {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: #8937b9;
+}
+
+.container-img-for-character:hover .overlay-img-for-character {
+  opacity: 1;
+}
+
+.text-for-character-overlay {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  line-height: 28px;
+  font-kerning: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
