@@ -1,9 +1,11 @@
 .container-img-for-character {
+  cursor: pointer;
   position: relative;
   width: 50%;
 }
 
 .overlay-img-for-character {
+  cursor: pointer;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -20,6 +22,7 @@
 }
 
 .text-for-character-overlay {
+  cursor: pointer;
   color: white;
   text-align: center;
   font-size: 30px;
@@ -48,6 +51,7 @@
 
 /* Modal Content */
 .modal-content {
+  cursor: pointer;
   position: relative;
   background-color: #fefefe;
   margin: auto;
