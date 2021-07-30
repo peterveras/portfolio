@@ -30,6 +30,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  font-kerning: normal;
 }
 
 p {
