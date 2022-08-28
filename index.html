@@ -58,25 +58,43 @@
 
         <div class="container">
             <h2 class="white-text text-center subtitle top_90">E. PETER VERASTEGUI G.</h2>
-            <div class="text-center load-more top_60 wow fadeInUp" data-wow-delay="0.2s">
+
+            <div lang="en" class="text-center load-more top_60 wow fadeInUp" data-wow-delay="0.2s">
                 <a href="home.html">
-                    <button class="site-btn" data-tilt> Interaction Design
-                        <i class="icon ion-md-arrow-down"></i>
+                    <button data-key="btn-ux" class="site-btn" data-tilt>Actual
                     </button>
                 </a>
                 <div class="padding_20"></div>
 
                 <a href="https://peterveras.github.io/photography/">
-                    <button class="site-btn" data-tilt> Photography
-                        <i class="icon ion-md-arrow-down"></i>
+                    <button data-key="btn-photo" class="site-btn" data-tilt>Actual
                     </button>
                 </a>
 
                 <div class="padding_20"></div>
 
                 <a href="https://peterverastegui.wordpress.com/">
-                    <button class="site-btn" data-tilt> Writing
-                        <i class="icon ion-md-arrow-down"></i>
+                    <button data-key="btn-writing" class="site-btn" data-tilt>Actual
+                    </button>
+                </a>
+            </div>
+
+            <div lang="es" class="text-center load-more top_60 wow fadeInUp text-center" data-wow-delay="0.2s">
+                <a href="es.html">
+                    <button data-key="btn-ux" class="site-btn" data-tilt>DEFAULT
+                    </button>
+                </a>
+                <div class="padding_20"></div>
+
+                <a href="https://peterveras.github.io/photography/">
+                    <button data-key="btn-photo" class="site-btn" data-tilt>DEFAULT
+                    </button>
+                </a>
+
+                <div class="padding_20"></div>
+
+                <a href="https://peterverastegui.wordpress.com/">
+                    <button data-key="btn-writing" class="site-btn" data-tilt>DEFAULT
                     </button>
                 </a>
             </div>
@@ -94,7 +112,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <p>Say hello at <a href="mailto:verastegui.peter@gmail.com">verastegui.peter@gmail.com</a></p>
+                        <p><a href="mailto:verastegui.peter@gmail.com">verastegui.peter@gmail.com</a></p>
                         <p class="copyright">
                             &copy;&nbsp;<span id="copyYear"></span>&nbsp;Peter Verastegui</p>
                     </div>
@@ -116,6 +134,74 @@
         $(document).ready(function () {
             $('#exampleModal').modal('show');
         }); 
+    </script>
+    <!-- Language  -->
+    <script>
+        //language data... could come from an external js/json file
+        let langdata = {
+            "languages": {
+                "en": {
+                    "strings": {
+                        "btn-ux": "INTERACTION DESIGN",
+                        "btn-photo": "PHOTOGRAPHY",
+                        "btn-writing": "WRITING"
+                    }
+                },
+                "es": {
+                    "strings": {
+                        "btn-ux": "DISEÑO UX",
+                        "btn-photo": "FOTOGRAFIA",
+                        "btn-writing": "ESCRITURA"
+                    }
+                },
+            }
+        }
+    </script>
+
+    <script>
+        //apply the language values to the content
+        document.addEventListener('DOMContentLoaded', () => {
+            //skip the lang value in the HTML tag for this example
+            let zones = document.querySelectorAll('html [lang]');
+            applyStrings(zones);
+
+            let lang = findLocaleMatch();
+            let container = document.querySelector(`html [lang*=${lang}]`);
+            container.className = 'lang-match';
+        });
+
+        function applyStrings(containers) {
+            containers.forEach(container => {
+                //find all the elements that have data-key
+                let locale = container.getAttribute('lang');
+                //console.log('looking inside of ', locale);
+                container.querySelectorAll(`[data-key]`).forEach(element => {
+                    let key = element.getAttribute('data-key');
+                    //console.log(element);
+                    //console.log(key);
+                    let lang = locale.substr(0, 2); //first 2 characters
+                    if (key) {
+                        element.textContent = langdata.languages[lang].strings[key];
+                    }
+                });
+            })
+        }
+
+        function findLocaleMatch() {
+            let keys = Object.keys(langdata.languages); //from our data
+            let locales = Intl.getCanonicalLocales(keys); //from our data validated
+
+            let lang = navigator.language; //from browser 
+            let locale = Intl.getCanonicalLocales(lang); //from browser validated
+            console.log('browser language', lang);
+            console.log('locales from data file', locale);
+
+            //find the match for locale inside locales
+            let langMatch = document.documentElement.getAttribute('lang'); //default
+            locales = locales.filter(l => locale == l);
+            langMatch = (locales.length > 0) ? locales[0] : langMatch;
+            return langMatch;
+        }
     </script>
 </body>
 

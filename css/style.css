@@ -2157,3 +2157,15 @@ footer .social-icons {
 .padding_10_item {
   padding: 10px 10px 10px 20px;
 }
+
+/*Language Change*/
+div[lang] {
+  display: none;
+}
+
+div[lang].lang-match {
+ 
+  display:block;
+  text-align: center;
+  padding-top: 3rem;
+}
