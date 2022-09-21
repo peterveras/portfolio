@@ -39,12 +39,12 @@ p {
   font-weight: 300;
 }
 a:link {
-  color: #ff1cb3;
+  color: #EE6CFA;
   background-color: transparent;
   text-decoration: none;
 }
 a:visited {
-  color: #1cffc5;
+  color: #26ff80;
   background-color: transparent;
   text-decoration: none;
 }
@@ -140,7 +140,7 @@ section {
 }
 
 .midnightHeader.dark .logo {
-  background: url(../img/logo-b.svg) left top no-repeat;
+  background: url(../img/logo-green.svg) left top no-repeat;
   background-size: 100%;
   width: 250px;
   height: 24px;
