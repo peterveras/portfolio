@@ -2158,6 +2158,389 @@ footer .social-icons {
   padding: 10px 10px 10px 20px;
 }
 
+/*------------------------ Foyer Section (Curated Portfolio Landing) ------------------------*/
+
+.foyer-container {
+  display: flex;
+  min-height: 100vh;
+  background: #161616;
+}
+
+.foyer-sidebar {
+  width: 150px;
+  background: #26ff80;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 100vh;
+}
+
+.foyer-sidebar-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 36px;
+  font-weight: 700;
+  color: #161616;
+  letter-spacing: -2px;
+}
+
+.foyer-main {
+  flex: 1;
+  padding: 80px 60px 0;
+  overflow-y: auto;
+}
+
+.foyer-header {
+    display: flex;
+    align-items: flex-start;
+    padding: 0 0 50px;
+    margin-bottom: 0;
+    flex-direction: column-reverse;
+}
+
+.foyer-header-content {
+  flex: 1;
+}
+
+.foyer-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.foyer-language-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.foyer-lang-icon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foyer-lang-link {
+  color: #888;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.foyer-lang-link.active,
+.foyer-lang-link:hover {
+  color: #26ff80;
+}
+
+.foyer-lang-sep {
+  color: #444;
+}
+
+.foyer-title {
+  font-size: 48px;
+  font-weight: 700;
+  font-style: italic;
+  color: white;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.foyer-social {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.foyer-social-link {
+  color: #888;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.foyer-social-link:hover {
+  color: #26ff80;
+}
+
+.foyer-social-link i {
+  font-size: 16px;
+}
+
+.foyer-social-icon-image {
+  width: 16px;
+  height: 16px;
+  display: block;
+  flex-shrink: 0;
+  opacity: 1;
+}
+
+.foyer-divider {
+  height: 1px;
+  background: #333;
+  margin: 0;
+}
+
+.foyer-section {
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.foyer-number {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  min-width: 60px;
+  margin-right: 30px;
+}
+
+.foyer-section-content {
+  flex: 1;
+}
+
+.foyer-section-content p {
+  color: #888;
+  margin: 0;
+  font-size: 17px;
+  line-height: 32px;
+}
+
+.foyer-section-content h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.highlight {
+  color: #26ff80;
+}
+
+.foyer-arrow {
+  font-size: 18px;
+  color: #888;
+  margin-left: 30px;
+  transition: all 0.3s ease;
+}
+
+.foyer-link:hover {
+  transform: translateX(10px);
+}
+
+.foyer-link:hover .foyer-arrow {
+  color: #26ff80;
+}
+
+.foyer-link:hover .foyer-section-content h2 {
+  color: #26ff80;
+}
+
+.foyer-content > .foyer-link:last-of-type {
+  border-bottom: 0;
+}
+
+@media screen and (min-width: 769px) {
+  .foyer-sidebar {
+    position: sticky;
+    top: 0;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 36px;
+  }
+
+  .foyer-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: #161616;
+  }
+
+  .foyer-header > div:first-child,
+  .foyer-number {
+    min-width: 150px;
+    width: 150px;
+    margin-right: 0;
+    padding-right: 30px;
+    box-sizing: border-box;
+  }
+
+  .foyer-main {
+    --foyer-sticky-link-height: 110px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .foyer-content {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .foyer-content > .foyer-link {
+    position: sticky;
+    background: #161616;
+  }
+
+  .foyer-content > .foyer-link:nth-of-type(1) {
+    bottom: calc(var(--foyer-sticky-link-height) * 2);
+    z-index: 3;
+  }
+
+  .foyer-content > .foyer-link:nth-of-type(2) {
+    bottom: var(--foyer-sticky-link-height);
+    z-index: 4;
+  }
+
+  .foyer-content > .foyer-link:nth-of-type(3) {
+    bottom: 0;
+    z-index: 5;
+  }
+}
+
+/* Responsive Foyer */
+@media screen and (max-width: 768px) {
+  .foyer-container {
+    flex-direction: column;
+  }
+
+  .foyer-sidebar {
+    width: 100%;
+    height: auto;
+    padding: 16px 20px;
+    position: sticky;
+    bottom: 0;
+    top: auto;
+    z-index: 25;
+    justify-content: flex-start;
+  }
+
+  .foyer-sidebar-text {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 24px;
+  }
+
+  .foyer-main {
+    padding: 20px 20px 80px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .foyer-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: #161616;
+    padding: 0 0 16px;
+  }
+
+  .foyer-content {
+    margin-top: auto;
+  }
+
+  .foyer-header-top {
+    margin-bottom: 18px;
+  }
+
+  .foyer-title {
+    font-size: 32px;
+  }
+
+  .foyer-social {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: nowrap;
+    margin-top: 12px;
+  }
+
+  .foyer-social-link span {
+    display: none;
+  }
+
+  .foyer-social-link {
+    gap: 0;
+  }
+
+  .foyer-social-link i {
+    font-size: 20px;
+  }
+
+  .foyer-social-icon-image {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .foyer-section {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 0;
+  }
+
+  .foyer-link {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .foyer-link .foyer-number {
+    display: none;
+  }
+
+  .foyer-intro .foyer-number {
+    display: none;
+  }
+
+  .foyer-link .foyer-section-content {
+    min-width: 0;
+  }
+
+  .foyer-link .foyer-section-content h2 {
+    font-size: clamp(18px, 5.5vw, 24px);
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  .foyer-section-content p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .foyer-number {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .foyer-arrow {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .foyer-link .foyer-arrow {
+    margin-left: 12px;
+    margin-top: 0;
+    flex-shrink: 0;
+  }
+
+  .foyer-main > .foyer-link:last-of-type {
+    border-bottom: 0;
+  }
+}
+
  /* CSS for language Script */
 div[lang] {
   display: none;

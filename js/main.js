@@ -73,7 +73,10 @@ $(window).on("load", function () {
       e.preventDefault();
     });
     window.onpopstate = function (event) {
-      location.reload();
+      // Load content from the current URL without reloading
+      loadContent(window.location.pathname);
+      ajaxLoad();
+      window.scrollTo(0, 0);
     };
     function loadContent(url) {
       var getData = $.get(url, function (response) {
@@ -103,8 +106,12 @@ $(window).on("load", function () {
 
   // FADE OUT EFFECT WHEN CLICK A LINK
   function pageface() {
-    $("body").prepend("<div class='fadeffect'></div>");
-    $(document).on("click", "a:not(.grid-item):not(.lightbox)", function () {
+    if ($(".fadeffect").length === 0) {
+      $("body").prepend("<div class='fadeffect'></div>");
+    }
+    // Ensure we don't bind the handler multiple times and ignore AJAX links
+    $(document).off("click", "a:not(.grid-item):not(.lightbox):not([data-type='ajax-load'])");
+    $(document).on("click", "a:not(.grid-item):not(.lightbox):not([data-type='ajax-load'])", function () {
       var newUrl = $(this).attr("href");
       $(".fadeffect").addClass("show");
       if (!newUrl || newUrl[0] === "#") {
@@ -324,12 +331,6 @@ $(window).on("load", function () {
       $container.infinitescroll("retrieve");
       $(".load-more").find("button").css("visibility", "hidden");
       return false;
-    });
-
-    $(window).bind("pageshow", function (event) {
-      if (event.originalEvent.persisted) {
-        window.location.reload();
-      }
     });
   }
 
