@@ -2310,7 +2310,7 @@ footer .social-icons {
 }
 
 .foyer-section-content p {
-  color: #888;
+  color: #A1A1A1;
   margin: 0;
   font-size: 17px;
   line-height: 32px;
@@ -2457,7 +2457,7 @@ footer .social-icons {
   }
 
   .foyer-title {
-    font-size: 32px;
+    font-size: 2.2rem;
   }
 
   .foyer-social {
@@ -2503,6 +2503,12 @@ footer .social-icons {
 
   .foyer-intro .foyer-number {
     display: none;
+  }
+
+  .foyer-intro,
+  .foyer-link {
+    padding-top: 35px;
+    padding-bottom: 35px;
   }
 
   .foyer-link .foyer-section-content {
