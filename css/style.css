@@ -1186,6 +1186,53 @@ section.dark.galaxy-bg .next-link .next-title {
   width: 100%;
 }
 
+.project-thumb {
+  position: relative;
+  display: block;
+}
+
+.project-thumb-tag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 10px 18px;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.project-thumb-tag--violet {
+  color: #161616;
+  background: #dd66ff;
+}
+
+.project-thumb-tag--lime {
+  color: #161616;
+  background: #2dfb7c;
+}
+
+.project-thumb-tag--cream {
+  color: #161616;
+  background: #fff8ef;
+}
+
+.project-thumb-tag--sky {
+  color: #161616;
+  background: #d7f0ff;
+}
+
+.project-thumb-tag--coral {
+  color: #161616;
+  background: #ffb39a;
+}
+
 .lightbox {
   margin-bottom: 60px;
   width: 100%;
@@ -1953,34 +2000,34 @@ footer .social-icons {
 }
 
 #fullscreen-usatoday-styleguide {
-  background: url("../img/works/work-1/Social-Video-Styleguide.png") repeat
+  background: url("../img/works/USA-Today/Social-Video-Styleguide.png") repeat
     scroll center center / cover;
   height: 50vh;
   width: 100%;
 }
 
 #fullscreen-linear-elements {
-  background: url("../img/works/work-1/Linear-Elements_4.gif") repeat scroll
+  background: url("../img/works/USA-Today/Linear-Elements_4.gif") repeat scroll
     center center / cover;
   height: 50vh;
   width: 100%;
 }
 #fullscreen-natgeo-badges {
-  background: url("../img/works/work-4/Badges-STORYTELLING-BOOTCAMP.png") repeat
+  background: url("../img/works/National-Geographic/Badges-STORYTELLING-BOOTCAMP.png") repeat
     scroll center center / cover;
   height: 90vh;
   width: 100%;
 }
 
 #fullscreen-natgeo-email {
-  background: url("../img/works/work-4/Email-evite-Storytelling-Bootcamp.png")
+  background: url("../img/works/National-Geographic/Email-evite-Storytelling-Bootcamp.png")
     repeat scroll center center / cover;
   height: 90vh;
   width: 100%;
 }
 
 #fullscreen-natgeo-tips {
-  background: url("../img/works/work-4/Top-10-tips-STORYTELLING-BOOTCAMP.png")
+  background: url("../img/works/National-Geographic/Top-10-tips-STORYTELLING-BOOTCAMP.png")
     repeat scroll center center / cover;
   height: auto;
   max-width: 100%;
@@ -2275,6 +2322,16 @@ footer .social-icons {
   line-height: 1;
   padding: 3rem 1rem 3rem 1rem;
   font-style: normal;
+}
+
+@media only screen and (max-width: 767px) {
+  .project-thumb-tag {
+    top: 12px;
+    right: 12px;
+    min-height: 36px;
+    padding: 8px 14px;
+    font-size: 15px;
+  }
 }
 
 .foyer-social {
