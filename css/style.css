@@ -2192,6 +2192,10 @@ footer .social-icons {
   line-height: 1.4;
 }
 
+.foyer-copy-name {
+  display: inline;
+}
+
 .foyer-main {
   flex: 1;
   padding: 0px 60px 0px 0px;
@@ -2259,7 +2263,18 @@ footer .social-icons {
   font-style: italic;
   color: white;
   margin: 0;
-  letter-spacing: -1px;
+  letter-spacing: -0.2rem;
+}
+
+.portfolio-hero-copy {
+  margin: 0 0 50px;
+}
+
+.portfolio-hero-title {
+  max-width: auto;
+  line-height: 1;
+  padding: 3rem 1rem 3rem 1rem;
+  font-style: normal;
 }
 
 .foyer-social {
@@ -2563,6 +2578,10 @@ footer .social-icons {
     margin-left: auto;
   }
 
+  .foyer-copy-name {
+    display: none;
+  }
+
   .foyer-main {
     padding: 20px 20px 80px 20px;
     min-height: 100vh;
@@ -2588,6 +2607,14 @@ footer .social-icons {
 
   .foyer-title {
     font-size: 3rem;
+  }
+
+  .portfolio-hero-copy {
+    margin-bottom: 35px;
+  }
+
+  .portfolio-hero-title {
+    line-height: 1.05;
   }
 
   .foyer-social {
