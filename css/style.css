@@ -1208,6 +1208,21 @@ section.dark.galaxy-bg .next-link .next-title {
   letter-spacing: -0.02em;
 }
 
+.project-thumb-tags {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  pointer-events: none;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.project-thumb-tags .project-thumb-tag {
+  position: static;
+}
+
 .project-thumb-tag--violet {
   color: #161616;
   background: #dd66ff;
@@ -2325,6 +2340,12 @@ footer .social-icons {
 }
 
 @media only screen and (max-width: 767px) {
+  .project-thumb-tags {
+    top: 12px;
+    right: 12px;
+    gap: 8px;
+  }
+
   .project-thumb-tag {
     top: 12px;
     right: 12px;
