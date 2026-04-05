@@ -2280,6 +2280,17 @@ footer .social-icons {
   display: none;
 }
 
+.foyer-header-portrait {
+  display: none;
+}
+
+.foyer-portrait-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .foyer-header-top {
   display: flex;
   justify-content: space-between;
@@ -2610,6 +2621,30 @@ footer .social-icons {
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .foyer-header-content {
+    padding-right: 60px;
+  }
+
+  .foyer-main {
+    padding-right: 280px;
+  }
+
+  .foyer-header-portrait {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 280px;
+    overflow: hidden;
+    border-left: 1px solid #333;
+    pointer-events: none;
+    background: #161616;
+    z-index: 15;
+  }
+}
+
 @media screen and (min-width: 769px) and (max-width: 1180px) {
   .foyer-social {
     gap: 30px;
@@ -2684,7 +2719,7 @@ footer .social-icons {
   }
 
   .foyer-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .portfolio-hero-copy {
