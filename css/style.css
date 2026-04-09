@@ -1084,10 +1084,23 @@ svg #wheel {
   transition: all ease 0.5s 0.6s;
 }
 
+.hero.load .hero-content .project-hero-tags,
+.hero.load .hero-content .project-hero-meta {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: all ease 0.5s 0.6s;
+}
+
 .hero .hero-content .category {
   transform: translateY(30px);
   opacity: 0;
   display: block;
+}
+
+.hero .hero-content .project-hero-tags,
+.hero .hero-content .project-hero-meta {
+  transform: translateY(30px);
+  opacity: 0;
 }
 
 .hero .hero-content .title {
@@ -1143,6 +1156,41 @@ header.load {
 }
 
 .hero-content .category {
+  color: #f2f2f2;
+  font-weight: 500;
+}
+
+.project-hero-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.project-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.project-hero-tags .project-thumb-tag,
+.project-hero-tags .project-thumb-tags {
+  position: static;
+  top: auto;
+  right: auto;
+  pointer-events: auto;
+}
+
+.project-hero-tags .project-thumb-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.project-hero-meta {
   color: #f2f2f2;
   font-weight: 500;
 }
@@ -2098,6 +2146,486 @@ footer .social-icons {
 
 .hotpink-bg {
   background-color: #ff1cb3;
+}
+
+.burger-king-cream-bg {
+  background-color: #f5ebdc;
+}
+
+.burger-king-red-bg {
+  background-color: #d62300;
+}
+
+.burger-king-brown-bg {
+  background-color: #502314;
+}
+
+.burger-king-orange-bg {
+  background-color: #ff8732;
+}
+
+.burger-king-yellow-bg {
+  background-color: #ffb612;
+}
+
+.burger-king-lottie {
+  width: 100%;
+  min-height: 240px;
+}
+
+.burger-king-lottie--hero {
+  min-height: 420px;
+}
+
+.burger-king-lottie--phone {
+  min-height: 540px;
+}
+
+.burger-king-lottie--spinner {
+  min-height: 170px;
+  max-width: 170px;
+  margin: 0 auto;
+}
+
+.burger-king-lottie--spinner-lg {
+  min-height: 195px;
+  max-width: 195px;
+  margin: 0 auto;
+}
+
+.burger-king-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.burger-king-section {
+  padding: 0 0 44px;
+}
+
+.burger-king-intro-section {
+  padding-top: 52px;
+}
+
+.burger-king-page .container {
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+.burger-king-page .burger-king-hero .hero-content {
+  text-align: center;
+}
+
+.burger-king-page .burger-king-hero .inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 24px;
+}
+
+.burger-king-page .burger-king-hero .project-hero-header {
+  margin-top: 64px;
+}
+
+.burger-king-page .burger-king-hero .project-thumb-tag--cream {
+  background: rgba(255, 248, 239, 0.96);
+}
+
+.burger-king-page .burger-king-hero .hero-image {
+  background-position: center top;
+}
+
+.burger-king-page .burger-king-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(80, 35, 20, 0.08) 0%, rgba(80, 35, 20, 0.18) 100%);
+}
+
+.burger-king-page .burger-king-hero .hero-content,
+.burger-king-page .burger-king-hero .down-icon {
+  z-index: 2;
+}
+
+.burger-king-intro-grid,
+.burger-king-card-row,
+.burger-king-media-row,
+.burger-king-ordering-row {
+  align-items: stretch;
+}
+
+.burger-king-card-row > div {
+  display: flex;
+  align-items: center;
+}
+
+.burger-king-copy p,
+.burger-king-panel p,
+.burger-king-ordering-copy p,
+.burger-king-section-header p {
+  color: #502314;
+}
+
+.burger-king-credits p {
+  line-height: 2;
+}
+
+.burger-king-panel {
+  border-radius: 28px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.burger-king-panel--work,
+.burger-king-panel--learned {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  min-height: 220px;
+}
+
+.burger-king-panel--work {
+  padding: 0;
+}
+
+.burger-king-panel-copy {
+  padding: 46px 42px;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.burger-king-panel--work .burger-king-panel-copy,
+.burger-king-panel--learned .burger-king-panel-copy {
+  max-width: 50%;
+  flex: 0 0 50%;
+}
+
+.burger-king-panel--work p,
+.burger-king-panel--work .title {
+  color: #fff8ef;
+}
+
+.burger-king-panel--challenge {
+  padding: 74px 72px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.burger-king-panel--challenge p,
+.burger-king-panel--challenge .title,
+.burger-king-panel--learned p,
+.burger-king-panel--learned .title {
+  color: #502314;
+}
+
+.burger-king-panel--cream,
+.burger-king-panel--hero {
+  background: #f5ebdc;
+}
+
+.burger-king-panel--cream {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 52px;
+}
+
+.burger-king-panel--hero {
+  min-height: 380px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger-king-panel--learned {
+  min-height: 308px;
+}
+
+.burger-king-panel-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 50%;
+  padding: 24px 24px 0 0;
+}
+
+.burger-king-panel-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.burger-king-panel-art--burger {
+  max-width: 220px;
+  margin-left: auto;
+  padding: 20px 20px 10px 0;
+}
+
+.burger-king-panel-art--onion {
+  max-width: 250px;
+  margin-left: auto;
+  padding: 0 12px 0 0;
+  align-items: center;
+}
+
+.burger-king-media-card {
+  border-radius: 24px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.burger-king-media-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.burger-king-media-card--app {
+  padding: 0;
+  min-height: 188px;
+  display: flex;
+  align-items: stretch;
+}
+
+.burger-king-media-card--app img {
+  object-fit: contain;
+  background: #502314;
+}
+
+.burger-king-media-card--photo {
+  min-height: 188px;
+}
+
+.burger-king-media-card--ordering {
+  min-height: 350px;
+  padding: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger-king-media-card--ordering img {
+  object-fit: contain;
+}
+
+.burger-king-ordering-copy .title {
+  color: #161616;
+  max-width: 480px;
+}
+
+.burger-king-ordering-copy p {
+  max-width: 500px;
+}
+
+.burger-king-ordering-row > div {
+  display: flex;
+  align-items: center;
+}
+
+.burger-king-ordering-copy {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.burger-king-section-header {
+  margin-bottom: 36px;
+}
+
+.burger-king-visual-system-section .image img {
+  border-radius: 24px;
+}
+
+.burger-king-visual-system-row {
+  align-items: stretch;
+  margin-left: 0;
+  margin-right: 0;
+  column-gap: 24px;
+}
+
+.burger-king-visual-system-row > div {
+  display: flex;
+  flex: 0 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.burger-king-visual-system-row > .col-lg-3 {
+  width: calc(30% - 12px);
+  max-width: calc(30% - 12px);
+}
+
+.burger-king-visual-system-row > .col-lg-9 {
+  width: calc(70% - 12px);
+  max-width: calc(70% - 12px);
+}
+
+.burger-king-visual-card {
+  width: 100%;
+}
+
+.burger-king-visual-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.burger-king-product-section,
+.burger-king-animation-section,
+.burger-king-ordering-section,
+.burger-king-learned-section {
+  padding-top: 10px;
+}
+
+.burger-king-work-section .container,
+.burger-king-challenge-section .container,
+.burger-king-product-section .container,
+.burger-king-animation-section .container,
+.burger-king-ordering-section .container,
+.burger-king-learned-section .container {
+  position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .burger-king-intro-grid {
+    align-items: flex-start;
+  }
+
+  .burger-king-card-row > div:first-child,
+  .burger-king-media-row > div:first-child {
+    padding-right: 12px;
+  }
+
+  .burger-king-card-row > div:last-child,
+  .burger-king-media-row > div:last-child {
+    padding-left: 12px;
+  }
+
+  .burger-king-ordering-row > div:first-child {
+    padding-right: 24px;
+  }
+
+  .burger-king-ordering-row > div:last-child {
+    padding-left: 24px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .burger-king-section {
+    padding-bottom: 28px;
+  }
+
+  .burger-king-intro-section {
+    padding-top: 40px;
+  }
+
+  .burger-king-panel--work,
+  .burger-king-panel--learned {
+    flex-direction: column;
+  }
+
+  .burger-king-panel--work .burger-king-panel-copy,
+  .burger-king-panel--learned .burger-king-panel-copy {
+    max-width: none;
+  }
+
+  .burger-king-panel-copy,
+  .burger-king-panel--challenge {
+    padding: 48px 42px;
+  }
+
+  .burger-king-media-card--ordering {
+    padding: 42px;
+  }
+
+  .burger-king-panel-art {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: none;
+    padding: 0 28px 24px;
+    justify-content: flex-end;
+  }
+
+  .burger-king-panel-art--burger img {
+    max-width: 220px;
+  }
+
+  .burger-king-panel-art--onion img {
+    max-width: 200px;
+  }
+
+  .burger-king-panel--cream,
+  .burger-king-panel--hero,
+  .burger-king-media-card--ordering {
+    min-height: 280px;
+  }
+
+  .burger-king-media-card,
+  .burger-king-panel {
+    margin-bottom: 24px;
+  }
+
+  .burger-king-visual-system-row > div {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .burger-king-visual-card {
+    margin-bottom: 24px;
+  }
+
+  .burger-king-ordering-copy .title,
+  .burger-king-ordering-copy p {
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .burger-king-page .container {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .burger-king-copy p,
+  .burger-king-panel p,
+  .burger-king-ordering-copy p,
+  .burger-king-section-header p {
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+  .burger-king-panel-copy,
+  .burger-king-panel--challenge {
+    padding: 28px 22px;
+  }
+
+  .burger-king-card-row > div {
+    display: block;
+  }
+
+  .burger-king-panel--hero {
+    min-height: 240px;
+    padding: 32px 18px;
+  }
+
+  .burger-king-media-card--ordering {
+    min-height: 260px;
+    padding: 18px;
+  }
+
+  .burger-king-panel-art {
+    padding: 0 18px 18px;
+  }
 }
 
 .galaxy-bg-purple {
