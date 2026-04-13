@@ -118,7 +118,7 @@
     <section data-midnight="white" class="white-bg burger-king-section burger-king-intro-section">
       <div class="container project-detail">
         <div class="row burger-king-intro-grid">
-          <div class="col-lg-6 burger-king-copy">
+          <div class="col-lg-6 burger-king-copy py-2">
             <h2 class="title bottom_30">Not a blank canvas</h2>
             <p>
               One of the most recognizable brands on the planet — every color, every font, every flame-grilled detail
@@ -129,7 +129,7 @@
               navigation, a design that wasn't connecting. The experience was there. The ease of buying wasn't.
             </p>
           </div>
-          <div class="col-lg-4 offset-lg-2 burger-king-copy burger-king-credits">
+          <div class="col-lg-4 offset-lg-2 burger-king-copy burger-king-credits py-2">
             <h2 class="title bottom_30">Credits</h2>
             <p>
               Client: Bolivian Food S.A.<br />
@@ -169,7 +169,7 @@
       <div class="container project-detail">
         <div class="row burger-king-media-row">
           <div class="col-lg-3 pb-4">
-            <div class="burger-king-media-card burger-king-brown-bg burger-king-media-card--app p-5">
+            <div class="burger-king-media-card burger-king-brown-bg burger-king-media-card--app">
               <div id="bk-splash-en" class="burger-king-lottie burger-king-lottie--app burger-king-media-card"></div>
             </div>
           </div>
@@ -185,23 +185,23 @@
 
     <section data-midnight="white" class="white-bg burger-king-section burger-king-visual-system-section">
       <div class="container project-detail">
-        <div class="row lightbox-gallery">
-          <div class="col-lg-8 offset-lg-2 text-center burger-king-section-header py-5">
-            <h3 class="subtitle bottom_10">Translating the brand into a design system</h3>
-            <p class="text-center padbot_30">
+        <div class="row lightbox-gallery align-items-center py-5">
+          <div class="col-lg-8 offset-lg-2 text-center burger-king-section-header">
+            <h3 class="subtitle bottom_20">Translating the brand into a design system</h3>
+            <p class="text-center mb-0">
               The project needed to feel unmistakably Burger King while still behaving like a modern
               product. That was a fun challenge, so used animations and illustrations, from the branding, to enhance the irreverent personality of the brand.
             </p>
           </div>
         </div>
         <div class="row burger-king-media-row burger-king-visual-system-row">
-          <div class="col-lg-3">
+          <div class="col-12 col-lg-3 pb-3">
             <div class="burger-king-media-card burger-king-visual-card burger-king-visual-card--illustration">
               <img class="round-corners" src="/img/works/Burger-king/Illustration-example-1.png"
                 alt="Burger King illustration style in the interface" />
             </div>
           </div>
-          <div class="col-lg-9">
+          <div class="col-12 col-lg-9 pb-3">
             <div class="burger-king-media-card burger-king-visual-card">
               <img class="round-corners" src="/img/works/Burger-king/Colores-typography.png"
                 alt="Burger King colors and typography system" />
@@ -213,8 +213,12 @@
 
     <section data-midnight="white" class="white-bg burger-king-section burger-king-animation-section">
       <div class="container project-detail">
+         <h3 class="subtitle pb-5 text-center">User Interface</h3>
         <div class="burger-king-panel burger-king-panel--hero burger-king-cream-bg">
-          <div id="bk-animation-main-en" class="burger-king-lottie burger-king-lottie--hero"></div>
+                <!-- Desktop animation -->
+                <div id="bk-animation-main-en" class="burger-king-lottie burger-king-lottie--hero d-none d-md-block"></div>
+                <!-- Mobile animation -->
+                <div id="bk-animation-main-en-mobile" class="burger-king-lottie burger-king-lottie--hero d-block d-md-none"></div>
         </div>
       </div>
     </section>
@@ -243,7 +247,7 @@
       </div>
     </section>
 
-<section data-midnight="white" class="white-bg burger-king-section burger-king-learned-section">
+<section data-midnight="white" class="white-bg burger-king-section burger-king-learned-section pb-0">
   <div class="container project-detail">
     <div class="burger-king-learned-stage">
       <div class="burger-king-panel burger-king-panel--learned burger-king-yellow-bg">
@@ -334,9 +338,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
   <script>
     [
-      { id: "bk-animation-main-en", path: "/img/works/Burger-king/BK-Animation-V2.json", loop: true, speed: 0.45 },
-      { id: "bk-spinner-en", path: "/img/works/Burger-king/Corona-Spinner.json", loop: true, speed: 1 },
-      { id: "bk-splash-en", path: "/img/works/Burger-king/Splash-screen.json", loop: true, speed: 0.7 }
+      { id: "bk-animation-main-en",        path: "/img/works/Burger-king/BK-Animation-V2.json",          loop: true, speed: 0.45 },
+      { id: "bk-animation-main-en-mobile", path: "/img/works/Burger-king/BK-Animation-UI-mobile.json",   loop: true, speed: 0.45 },
+      { id: "bk-spinner-en",               path: "/img/works/Burger-king/Corona-Spinner.json",           loop: true, speed: 1 },
+      { id: "bk-splash-en",                path: "/img/works/Burger-king/Splash-screen.json",            loop: true, speed: 0.7 }
     ].forEach(function (animation) {
       var container = document.getElementById(animation.id);
       if (!container || !window.lottie) return;
@@ -353,6 +358,7 @@
       if (animation.speed) instance.setSpeed(animation.speed);
     });
 
+// Set current year in footer
     var currentYear = new Date().getFullYear();
     var desktopYear = document.getElementById("copyYear");
     var mobileYear = document.getElementById("copyYearMobile");
