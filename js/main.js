@@ -1,15 +1,25 @@
-$(window).on("load", function () {
+$(document).ready(function () {
   /*--------------------------------------------------
-   PRELOADER
+   PRELOADER HIDE LOGIC
 ---------------------------------------------------*/
-  $("main").waitForImages(function () {
-    $("#preloader").delay(100).fadeOut("slow");
-  });
+  var preloaderHidden = false;
+  function hidePreloader() {
+    if (!preloaderHidden) {
+      $("#preloader").delay(100).fadeOut("slow");
+      preloaderHidden = true;
+    }
+  }
+
+  // Hide when images are ready
+  $("main").waitForImages(hidePreloader);
+
+  // Fail-safe: Force hide after 3 seconds if assets are hanging
+  setTimeout(hidePreloader, 3000);
 
   // WOW JS
   new WOW({ mobile: false }).init();
 
-  $(document).ready(function () {
+  // Site Initialization
     SiteMenu();
     slideShow();
     PortfolioGrids();
@@ -102,7 +112,6 @@ $(window).on("load", function () {
     }
     centerInit();
     $(window).resize(centerInit);
-  });
 
   // FADE OUT EFFECT WHEN CLICK A LINK
   function pageface() {
@@ -241,20 +250,176 @@ $(window).on("load", function () {
   }
 
   function PortfolioGrids() {
-    var $container = $(".masonry");
-    $container.imagesLoaded(function () {
-      $container.isotope({
-        itemSelector: ".grid-item, .lightbox-gallery .image",
-        gutter: 0,
-        transitionDuration: "0.5s",
-        columnWidth: ".grid-item",
+    var $justifiedGrids = $(".js-filter-grid");
+    var $containers = $(".masonry").not(".js-filter-grid");
+
+    function getJustifiedTargetHeight() {
+      var width = $(window).width();
+      if (width <= 580) {
+        return 220;
+      }
+      if (width <= 992) {
+        return 260;
+      }
+      return 300;
+    }
+
+    function getMinimumItemsPerRow() {
+      var width = $(window).width();
+      if (width <= 580) {
+        return 1;
+      }
+      if (width <= 992) {
+        return 2;
+      }
+      return 3;
+    }
+
+    function getGridItemRatio($item) {
+      var presetRatio = parseFloat($item.attr("data-ratio"));
+      if (presetRatio) {
+        return presetRatio;
+      }
+
+      var $img = $item.find("img").first();
+      if ($img.length && $img[0].naturalWidth && $img[0].naturalHeight) {
+        var naturalRatio = $img[0].naturalWidth / $img[0].naturalHeight;
+        $item.attr("data-ratio", naturalRatio);
+        return naturalRatio;
+      }
+
+      return 1.5;
+    }
+
+    function layoutJustifiedRow(items, ratioSum, containerWidth, targetHeight, gap, isLastRow) {
+      if (!items.length || !ratioSum || !containerWidth) {
+        return;
+      }
+
+      var availableWidth = containerWidth - gap * Math.max(items.length - 1, 0);
+      var rowHeight = isLastRow
+        ? Math.min(targetHeight, availableWidth / ratioSum)
+        : availableWidth / ratioSum;
+
+      $.each(items, function (_, item) {
+        var itemWidth = rowHeight * item.ratio;
+        item.$item.css({
+          width: itemWidth + "px",
+          height: rowHeight + "px",
+        });
+      });
+    }
+
+    function layoutJustifiedGrid($grid) {
+      var gap = 10;
+      var targetHeight = getJustifiedTargetHeight();
+      var minimumItemsPerRow = getMinimumItemsPerRow();
+      var containerWidth = $grid.width();
+      var $items = $grid.children(".grid-item").filter(":visible");
+      var row = [];
+      var rowRatio = 0;
+
+      if (!containerWidth || !$items.length) {
+        return;
+      }
+
+      $items.each(function () {
+        var $item = $(this);
+        var ratio = getGridItemRatio($item);
+
+        $item.css({
+          width: "",
+          height: "",
+        });
+
+        row.push({ $item: $item, ratio: ratio });
+        rowRatio += ratio;
+
+        if (minimumItemsPerRow === 1) {
+          layoutJustifiedRow(row, rowRatio, containerWidth, targetHeight, gap, true);
+          row = [];
+          rowRatio = 0;
+          return;
+        }
+
+        if (
+          row.length >= minimumItemsPerRow &&
+          rowRatio * targetHeight + gap * Math.max(row.length - 1, 0) >= containerWidth
+        ) {
+          layoutJustifiedRow(row, rowRatio, containerWidth, targetHeight, gap, false);
+          row = [];
+          rowRatio = 0;
+        }
+      });
+
+      if (row.length) {
+        layoutJustifiedRow(row, rowRatio, containerWidth, targetHeight, gap, true);
+      }
+    }
+
+    $justifiedGrids.each(function () {
+      var $grid = $(this);
+
+      $grid.imagesLoaded(function () {
+        layoutJustifiedGrid($grid);
       });
     });
-    $(".portfolio_filter ul li a").on("click", function () {
-      $(".portfolio_filter ul li a").removeClass("select-cat");
-      $(this).addClass("select-cat");
-      var selector = $(this).attr("data-filter");
-      $(".masonry").isotope({
+
+    $containers.each(function () {
+      var $container = $(this);
+      var itemSelector = ".grid-item, .lightbox-gallery .image";
+
+      $container.imagesLoaded(function () {
+        $container.isotope({
+          itemSelector: itemSelector,
+          gutter: 0,
+          transitionDuration: "0.5s",
+          columnWidth: ".grid-item",
+          percentPosition: true,
+        });
+      });
+    });
+
+    // Filter click logic for both the hidden menu and the inline tags
+    $(".portfolio_filter ul li a, .filter-nav li a")
+      .off("click")
+      .on("click", function () {
+      var $link = $(this);
+      var $portfolio = $link.closest("#portfolio, .portfolio");
+      var $targetGrid = $portfolio.find(".js-filter-grid").first();
+      var $filterLinks = $link.closest("ul").find("a");
+
+      if (!$targetGrid.length) {
+        $targetGrid = $(".masonry").first();
+      }
+
+      if (!$targetGrid.length) {
+        return false;
+      }
+
+      $filterLinks.removeClass("select-cat active");
+      $link.addClass("select-cat active");
+      if ($link.closest(".portfolio_filter").length) {
+        $(".portfolio_filter ul li a, .filter-nav li a")
+          .not($filterLinks)
+          .removeClass("select-cat active");
+      }
+
+      var selector = $link.attr("data-filter");
+
+      if ($targetGrid.hasClass("js-filter-grid")) {
+        $targetGrid.children(".grid-item").each(function () {
+          var $item = $(this);
+          var matches = selector === "*" || $item.is(selector);
+
+          $item.toggle(matches);
+        });
+
+        layoutJustifiedGrid($targetGrid);
+        return false;
+      }
+
+      $targetGrid.isotope({
         filter: selector,
         animationOptions: {
           duration: 750,
@@ -265,16 +430,33 @@ $(window).on("load", function () {
       return false;
     });
 
-    $(".filter-icon").on("click", function () {
+    $(window)
+      .off("resize.justifiedGrid")
+      .on("resize.justifiedGrid", function () {
+        $justifiedGrids.each(function () {
+          layoutJustifiedGrid($(this));
+        });
+      });
+
+    $(".filter-icon")
+      .off("click")
+      .on("click", function () {
       $(".portfolio_filter").addClass("show");
     });
 
-    $(".portfolio_filter").on("click", function (event) {
+    $(".portfolio_filter")
+      .off("click")
+      .on("click", function (event) {
       if (!$(event.target).is(".portfolio_filter ul li a")) {
         $(".portfolio_filter").removeClass("show");
         return false;
       }
     });
+
+    var $container = $(".masonry").first();
+    if (!$container.length) {
+      return;
+    }
 
     // Infinite Scroll
     var curPage = 1;
@@ -648,5 +830,4 @@ $(window).on("load", function () {
     e.relatedTarget; // previous active tab
   });
 });
-
 // document end

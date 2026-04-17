@@ -4,35 +4,94 @@
   width: 50%;
 }
 
-.overlay-img-for-character {
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
+.character-card-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+
+.character-card-link img {
+  display: block;
   width: 100%;
-  opacity: 0;
-  background-color: #8937b9;
 }
 
-.container-img-for-character:hover .overlay-img-for-character {
+.character-card-link .overlay-img-for-character {
+  cursor: pointer;
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 12px;
   opacity: 1;
+  background: transparent;
+  padding: 18px 0 0;
 }
 
-.text-for-character-overlay {
+.character-card-link .text-for-character-overlay {
   cursor: pointer;
   color: white;
-  text-align: center;
+  text-align: left;
   font-size: 30px;
-  line-height: 28px;
+  line-height: 1;
   font-kerning: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  position: static;
+  transform: none;
+  -ms-transform: none;
+}
+
+.character-card-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-color: #f2f2f2;
+  color: #f2f2f2;
+}
+
+.character-card-button i {
+  font-size: 14px;
+  color: #f2f2f2;
+}
+
+.character-card-button:hover,
+.character-card-button:focus {
+  background: #f2f2f2;
+  color: #161616;
+  border-color: #f2f2f2;
+}
+
+.character-card-button:hover i,
+.character-card-button:focus i {
+  color: #161616;
+}
+
+.character-card-link.lightbox:hover img {
+  transform: none;
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+  .lightbox-gallery.masonry .container-img-for-character {
+    width: 100% !important;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .character-card-link .overlay-img-for-character {
+    gap: 10px;
+    padding: 16px 0 0;
+  }
+
+  .character-card-link .text-for-character-overlay {
+    font-size: 22px;
+  }
+
+  .character-card-button {
+    gap: 8px;
+  }
 }
 
 /* The Modal (background) */
