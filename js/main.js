@@ -1,4 +1,20 @@
 $(document).ready(function () {
+  var ajaxManagedStyleAttr = "data-ajax-page-style";
+  var burgerKingLottieSrc =
+    "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js";
+  var globalStyles = {};
+  var scrollRevealObserver = null;
+
+  [
+    "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css",
+    "/css/style.css",
+    "/icon-fonts/fontawesome-5.0.6/css/fontawesome-all.min.css",
+    "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700",
+  ].forEach(function (href) {
+    globalStyles[normalizeUrl(href)] = true;
+  });
+  primeManagedStyles();
+
   /*--------------------------------------------------
    PRELOADER HIDE LOGIC
 ---------------------------------------------------*/
@@ -16,10 +32,10 @@ $(document).ready(function () {
   // Fail-safe: Force hide after 3 seconds if assets are hanging
   setTimeout(hidePreloader, 3000);
 
-  // WOW JS
-  new WOW({ mobile: false }).init();
-
   // Site Initialization
+  initializePage();
+
+  function initializePage() {
     SiteMenu();
     slideShow();
     PortfolioGrids();
@@ -31,87 +47,428 @@ $(document).ready(function () {
     fixed_buttons();
     lightbox();
     carousel_slider();
+    runResponsiveEnhancements();
+    runPageSpecificInitializers();
+  }
 
-    function mobile() {
-      if ($(window).width() >= 769) {
-        HoverVideo();
-        hovertrid();
-        DownIcon();
-      }
+  function ajaxLoad() {
+    SiteMenu();
+    PortfolioGrids();
+    pageface();
+    header_effect();
+    fixed_buttons();
+    lightbox();
+    carousel_slider();
+    runResponsiveEnhancements();
+    runPageSpecificInitializers();
+  }
+
+  function runResponsiveEnhancements() {
+    if ($(window).width() >= 769) {
+      HoverVideo();
+      hovertrid();
+      DownIcon();
     }
+  }
 
-    mobile();
-    $(window).resize(mobile);
+  $(window)
+    .off("resize.mobileEnhancements")
+    .on("resize.mobileEnhancements", runResponsiveEnhancements);
 
-    //WHEN AJAX LOAD
-    function ajaxLoad() {
-      SiteMenu();
-      PortfolioGrids();
-      pageface();
-      header_effect();
-      fixed_buttons();
-      lightbox();
-      carousel_slider();
-
-      function mobile() {
-        if ($(window).width() >= 769) {
-          HoverVideo();
-          hovertrid();
-          DownIcon();
-        }
-      }
-
-      mobile();
-      $(window).resize(mobile);
-    }
-
-    /*--------------------------------------------------
+  /*--------------------------------------------------
     AJAX LOAD
 ---------------------------------------------------*/
 
-    $("main").on("click", '[data-type="ajax-load"]', function (e) {
-      var href = $(this).attr("href");
-      loadHtml();
-      function loadHtml() {
-        setTimeout(function () {
-          loadContent(href);
-          history.pushState("", "new URL: " + href, href);
-          SiteMenu();
-          $("header, .uptotop").midnight();
-        }, 500);
-      }
-      e.preventDefault();
-    });
-    window.onpopstate = function (event) {
-      // Load content from the current URL without reloading
-      loadContent(window.location.pathname);
-      ajaxLoad();
-      window.scrollTo(0, 0);
-    };
-    function loadContent(url) {
-      var getData = $.get(url, function (response) {
-        var markup = $("<main>" + response + "</main>");
-        var fragment = markup.find("main").html();
-        var title = markup.find("title").html();
-        $("head title").html(title);
+  $("main").on("click", '[data-type="ajax-load"]', function (e) {
+    var href = $(this).attr("href");
+    e.preventDefault();
 
-        $("main").html(fragment);
-        window.scrollTo(0, 0);
-        ajaxLoad();
-      });
+    setTimeout(function () {
+      loadContent(href, true);
+      $("header, .uptotop").midnight();
+    }, 500);
+  });
+
+  window.onpopstate = function () {
+    loadContent(window.location.pathname + window.location.search, false);
+  };
+
+  function loadContent(url, shouldPushState) {
+    $.get(url, function (response) {
+      var parser = new DOMParser();
+      var responseDocument = parser.parseFromString(response, "text/html");
+      var fragment = $(responseDocument).find("main").html();
+      var title = $(responseDocument).find("title").first().text();
+
+      if (!fragment) {
+        window.location = url;
+        return;
+      }
+
+      syncPageStyles(responseDocument);
+
+      if (title) {
+        $("head title").text(title);
+      }
+
+      $("main").html(fragment);
+
+      if (shouldPushState) {
+        history.pushState("", "new URL: " + url, url);
+      }
+
+      window.scrollTo(0, 0);
+      ajaxLoad();
+    });
+  }
+
+  function normalizeUrl(url) {
+    if (!url) {
+      return "";
     }
 
-    /*--------------------------------------------------
+    var link = document.createElement("a");
+    link.href = url;
+    return link.href;
+  }
+
+  function syncPageStyles(responseDocument) {
+    var requiredStyles = {};
+
+    $(responseDocument)
+      .find('head link[rel="stylesheet"][href]')
+      .each(function () {
+        var href = $(this).attr("href");
+        var normalizedHref = normalizeUrl(href);
+
+        if (!normalizedHref || globalStyles[normalizedHref]) {
+          return;
+        }
+
+        requiredStyles[normalizedHref] = href;
+
+        if (
+          !$("head link[rel='stylesheet'][href]").filter(function () {
+            return normalizeUrl($(this).attr("href")) === normalizedHref;
+          }).length
+        ) {
+          $("<link>", {
+            rel: "stylesheet",
+            href: href,
+          })
+            .attr(ajaxManagedStyleAttr, "true")
+            .appendTo("head");
+        }
+      });
+
+    $("head link[" + ajaxManagedStyleAttr + "]").each(function () {
+      var currentHref = normalizeUrl($(this).attr("href"));
+      if (!requiredStyles[currentHref]) {
+        $(this).remove();
+      }
+    });
+  }
+
+  function primeManagedStyles() {
+    $("head link[rel='stylesheet'][href]").each(function () {
+      var normalizedHref = normalizeUrl($(this).attr("href"));
+      if (!normalizedHref || globalStyles[normalizedHref]) {
+        return;
+      }
+
+      $(this).attr(ajaxManagedStyleAttr, "true");
+    });
+  }
+
+  function runPageSpecificInitializers() {
+    setFooterYears();
+    initBurgerKingAnimations();
+    initScrollReveal();
+  }
+
+  function initScrollReveal() {
+    var revealTargets = collectScrollRevealTargets();
+
+    if (!revealTargets.length) {
+      if (scrollRevealObserver) {
+        scrollRevealObserver.disconnect();
+        scrollRevealObserver = null;
+      }
+      return;
+    }
+
+    prepareScrollRevealTargets(revealTargets);
+
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      revealTargets.forEach(showScrollRevealTarget);
+      if (scrollRevealObserver) {
+        scrollRevealObserver.disconnect();
+        scrollRevealObserver = null;
+      }
+      return;
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      revealTargets.forEach(showScrollRevealTarget);
+      return;
+    }
+
+    if (scrollRevealObserver) {
+      scrollRevealObserver.disconnect();
+    }
+
+    scrollRevealObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          showScrollRevealTarget(entry.target);
+          scrollRevealObserver.unobserve(entry.target);
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px 0px -10% 0px",
+        threshold: 0.12,
+      }
+    );
+
+    revealTargets.forEach(function (target) {
+      if (target.classList.contains("scroll-reveal--visible")) {
+        return;
+      }
+
+      scrollRevealObserver.observe(target);
+    });
+  }
+
+  function collectScrollRevealTargets() {
+    var selectors = [
+      ".portfolio-hero-copy",
+      ".portfolio-filters-inline",
+      ".portfolio-inline-grid .grid-item",
+      ".hero .project-hero-header > *",
+      "main section > .container",
+      "main section > .project-detail",
+      ".project-detail .row.lightbox-gallery",
+      ".lightbox-gallery.masonry > .image",
+      ".next-link",
+    ];
+    var targets = [];
+
+    selectors.forEach(function (selector) {
+      var elements = document.querySelectorAll(selector);
+      Array.prototype.forEach.call(elements, function (element) {
+        if (!shouldScrollRevealElement(element)) {
+          return;
+        }
+
+        if (targets.indexOf(element) === -1) {
+          targets.push(element);
+        }
+      });
+    });
+
+    return targets;
+  }
+
+  function shouldScrollRevealElement(element) {
+    if (!element || !element.offsetParent && !element.getClientRects().length) {
+      return false;
+    }
+
+    if (
+      element.closest(
+        "header, #full-menu, .uptotop, .mfp-wrap, .mfp-bg, .owl-carousel, .burger-king-lottie"
+      )
+    ) {
+      return false;
+    }
+
+    return true;
+  }
+
+  function prepareScrollRevealTargets(targets) {
+    targets.forEach(function (target) {
+      target.classList.add("scroll-reveal");
+      clearScrollRevealDelayClasses(target);
+    });
+
+    applyScrollRevealDelays(".portfolio-inline-grid", ":scope .grid-item");
+    applyScrollRevealDelays(".lightbox-gallery.masonry", ":scope > .image");
+    applyScrollRevealDelays(".project-hero-header", ":scope > *");
+  }
+
+  function applyScrollRevealDelays(containerSelector, childSelector) {
+    var containers = document.querySelectorAll(containerSelector);
+
+    Array.prototype.forEach.call(containers, function (container) {
+      var children = container.querySelectorAll(childSelector);
+
+      Array.prototype.forEach.call(children, function (child, index) {
+        if (!child.classList.contains("scroll-reveal")) {
+          return;
+        }
+
+        child.classList.add(
+          "scroll-reveal--delay-" + ((index % 4) + 1)
+        );
+      });
+    });
+  }
+
+  function clearScrollRevealDelayClasses(element) {
+    [
+      "scroll-reveal--delay-1",
+      "scroll-reveal--delay-2",
+      "scroll-reveal--delay-3",
+      "scroll-reveal--delay-4",
+    ].forEach(function (className) {
+      element.classList.remove(className);
+    });
+  }
+
+  function showScrollRevealTarget(element) {
+    if (!element) {
+      return;
+    }
+
+    element.classList.add("scroll-reveal--visible");
+  }
+
+  function setFooterYears() {
+    var currentYear = new Date().getFullYear();
+
+    ["copyYear", "copyYearMobile"].forEach(function (id) {
+      var elements = document.querySelectorAll("#" + id);
+      Array.prototype.forEach.call(elements, function (element) {
+        element.textContent = currentYear;
+      });
+    });
+  }
+
+  function loadScriptOnce(src, callback) {
+    if (typeof callback !== "function") {
+      return;
+    }
+
+    if (src === burgerKingLottieSrc && typeof window.lottie !== "undefined") {
+      callback();
+      return;
+    }
+
+    var existingScript = $("script[src='" + src + "']").get(0);
+    if (existingScript) {
+      if (
+        existingScript.getAttribute("data-loaded") === "true" ||
+        (src === burgerKingLottieSrc && typeof window.lottie !== "undefined")
+      ) {
+        callback();
+      } else {
+        existingScript.addEventListener("load", callback, { once: true });
+      }
+      return;
+    }
+
+    var script = document.createElement("script");
+    script.src = src;
+    script.async = true;
+    script.onload = function () {
+      script.setAttribute("data-loaded", "true");
+      callback();
+    };
+    document.head.appendChild(script);
+  }
+
+  function initBurgerKingAnimations() {
+    var burgerKingAnimations = getBurgerKingAnimations();
+    var activeAnimations = burgerKingAnimations.filter(function (animation) {
+      return document.getElementById(animation.id);
+    });
+
+    if (!activeAnimations.length) {
+      return;
+    }
+
+    loadScriptOnce(burgerKingLottieSrc, function () {
+      if (!window.lottie) {
+        return;
+      }
+
+      activeAnimations.forEach(function (animation) {
+        var container = document.getElementById(animation.id);
+        if (!container || container.getAttribute("data-lottie-initialized") === "true") {
+          return;
+        }
+
+        var instance = window.lottie.loadAnimation({
+          container: container,
+          renderer: "svg",
+          loop: animation.loop,
+          autoplay: true,
+          path: animation.path,
+          rendererSettings: {
+            preserveAspectRatio: "xMidYMid meet",
+          },
+        });
+
+        if (animation.speed) {
+          instance.setSpeed(animation.speed);
+        }
+
+        container.setAttribute("data-lottie-initialized", "true");
+      });
+    });
+  }
+
+  function getBurgerKingAnimations() {
+    var isSpanishBurgerKing =
+      window.location.pathname.indexOf("/html/spanish/Burger-King.html") !== -1;
+
+    return [
+      {
+        id: "bk-animation-main-en",
+        path: "/img/works/Burger-king/BK-Animation-V2.json",
+        loop: true,
+        speed: 0.45,
+      },
+      {
+        id: "bk-animation-main-en-mobile",
+        path: "/img/works/Burger-king/BK-Animation-UI-mobile.json",
+        loop: true,
+        speed: isSpanishBurgerKing ? 0.6 : 0.45,
+      },
+      {
+        id: "bk-spinner-en",
+        path: "/img/works/Burger-king/Corona-Spinner.json",
+        loop: true,
+        speed: 1,
+      },
+      {
+        id: "bk-splash-en",
+        path: "/img/works/Burger-king/Splash-screen.json",
+        loop: true,
+        speed: 0.7,
+      },
+    ];
+  }
+
+  /*--------------------------------------------------
     HOME AUTO HEİGHT
 ---------------------------------------------------*/
-    function centerInit() {
-      var hometext = $("section.home, .home-slider, .hero");
-      hometext.css({
-        height: $(window).height() + "px",
-      });
-    }
-    centerInit();
-    $(window).resize(centerInit);
+  function centerInit() {
+    var hometext = $("section.home, .home-slider, .hero");
+    hometext.css({
+      height: $(window).height() + "px",
+    });
+  }
+  centerInit();
+  $(window).resize(centerInit);
 
   // FADE OUT EFFECT WHEN CLICK A LINK
   function pageface() {

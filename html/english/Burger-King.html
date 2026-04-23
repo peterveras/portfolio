@@ -97,7 +97,7 @@
           </div>
         </div>
       </div>
-      <div class="down-icon white" data-wow-delay="1.7s">
+      <div class="down-icon white">
         <svg width="26px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" style="
               fill-rule: evenodd;
@@ -335,36 +335,6 @@
   <script src="/js/jquery-2.1.4.min.js"></script>
   <script src="/js/plugins.js"></script>
   <script src="/js/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
-  <script>
-    [
-      { id: "bk-animation-main-en",        path: "/img/works/Burger-king/BK-Animation-V2.json",          loop: true, speed: 0.45 },
-      { id: "bk-animation-main-en-mobile", path: "/img/works/Burger-king/BK-Animation-UI-mobile.json",   loop: true, speed: 0.45 },
-      { id: "bk-spinner-en",               path: "/img/works/Burger-king/Corona-Spinner.json",           loop: true, speed: 1 },
-      { id: "bk-splash-en",                path: "/img/works/Burger-king/Splash-screen.json",            loop: true, speed: 0.7 }
-    ].forEach(function (animation) {
-      var container = document.getElementById(animation.id);
-      if (!container || !window.lottie) return;
-      var instance = lottie.loadAnimation({
-        container: container,
-        renderer: "svg",
-        loop: animation.loop,
-        autoplay: true,
-        path: animation.path,
-        rendererSettings: {
-          preserveAspectRatio: "xMidYMid meet"
-        }
-      });
-      if (animation.speed) instance.setSpeed(animation.speed);
-    });
-
-// Set current year in footer
-    var currentYear = new Date().getFullYear();
-    var desktopYear = document.getElementById("copyYear");
-    var mobileYear = document.getElementById("copyYearMobile");
-    if (desktopYear) desktopYear.innerHTML = currentYear;
-    if (mobileYear) mobileYear.innerHTML = currentYear;
-  </script>
 </body>
 
 </html>
